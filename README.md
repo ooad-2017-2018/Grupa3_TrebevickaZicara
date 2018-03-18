@@ -1,7 +1,8 @@
-# Tim: TrebevićkaŽičara
-### Grupa: 3
+### Tim: TrebevićkaŽičara
+![70f8fdfc846afb510f0f02fcb75dd860](https://user-images.githubusercontent.com/37112852/37571060-152c4076-2af8-11e8-874d-4d968691de3b.jpg) 
 
 ---
+### Grupa: 3
 ### Članovi tima:
 1. Medina Dacić
 2. Mirela Dedić
@@ -10,7 +11,7 @@
 
 ## Tema:
 ## EBOOK & EREADER TOOL
- ![alt text](https://www.google.ba/search?q=quotes+about+books&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj00svN4PbZAhWiBZoKHWu9C8AQ_AUICigB&biw=1366&bih=637#imgdii=PT9tp8XVgVIVHM:&imgrc=C64p46xk1VJaeM:)
+
 ---
 
 ### Opis teme:
@@ -22,6 +23,8 @@ J.K.Rowling je rekao:
 >“I do believe that something very magical can happen when you read a good book.”.
 
 Iznenadite Vaš mozak sa nekom dobrom knjigom! 
+
+![photo 1 4](https://user-images.githubusercontent.com/37112852/37571016-9f8b3228-2af7-11e8-8d38-f01febb45601.jpg)  
 
  Cilj razvoja naše aplikacije jeste upravo omogućiti  što je moguće veći pristup Gazi Husrev – begovoj bibilioteci  građanima naše države. Zbog toga želimo da zainteresujemo što veći broj građana, putem raznoraznih event-a koji se održavaju u našim mnogobrojnim prostorijama. Također želimo  olakšati rad, organizaciju i poslovanje ovog organizacionog kompleksa.  Omogućene su raznorazne aktivnosti, kao i specijalni popusti za članarinu, kao i poseban program za slabovidne osobe.
 
