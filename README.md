@@ -1,23 +1,23 @@
-#Tim: TrebevićkaŽičara
+# Tim: TrebevićkaŽičara
 
-###Grupa: 3
+### Grupa: 3
 
 ---
 
-###Članovi tima:
+### Članovi tima:
 1. Medina Dacić
 2. Mirela Dedić
 3. Damir Dupanović
 
 ---
 
-##Tema:
+## Tema:
 
-##EBOOK & EREADER TOOL
+## EBOOK & EREADER TOOL
 
 ---
 
-###Opis teme:
+### Opis teme:
 
 U vrijeme modernog doba, kada se informacije šire enormnim brzinama, čija tačnost u većini slučajeva teži ka nuli, kada su Vaše naslovnice na društvenim mrežama prepune skupom nebitnih i nepovezanih podataka i kada se ljudi više “brinu” za tuđe, nego za svoje živote, postavlja se pitanje, da li ja moram biti kao većina? Mi nismo protiv tehnologije, baš naprotiv! Pravi izazov za savremenog čovjeka postalo je korištenje tehnologije na pravi način.  Ali čekajte, nešto nije uredu, nešto nedostaje… Gdje su nestale te male, dragocijene stvarčice, koje su bile podloga za uspjeh mnogih historijskih pobjeda, poduhvata,  koje datiraju još od vremena drevnih naroda… Ne mislimo valjda na isto? Da! Knjige!
 
@@ -33,7 +33,7 @@ Konkretno, EBOOK & EREADER TOOL je aplikacija namijenjena svim korisnicima i pos
 ---
 
 
-###Procesi
+### Procesi
 
 **Registracija/prijava na aplikaciju**
 Za nove korisnike koji nemaju svoj username i šifru za pristup potrebna je registracija. 
@@ -165,7 +165,7 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 
 ---
 
-###Funkcionalnosti: 
+### Funkcionalnosti: 
 
 -	Registracija/prijava na aplikaciju
 -	Promjena lozinke
@@ -189,7 +189,7 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 
 ---
 
-###Akteri
+### Akteri
 
 -**Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, organizaciju event-a, nabavku i prodaju knjiga, kao i za njihovo zaduživanje, naplata obilaska muzejskog dijela i posebnih arhiva dokumenata.
 -**Član biblioteke** – Osoba koja može iznajmljivati knjige i koristiti čitaonu.
