@@ -28,6 +28,9 @@ Iznenadite Vaš mozak sa nekom dobrom knjigom!
 
  Cilj razvoja naše aplikacije jeste upravo omogućiti  što je moguće veći pristup Gazi Husrev – begovoj bibilioteci  građanima naše države. Zbog toga želimo da zainteresujemo što veći broj građana, putem raznoraznih event-a koji se održavaju u našim mnogobrojnim prostorijama. Također želimo  olakšati rad, organizaciju i poslovanje ovog organizacionog kompleksa.  Omogućene su raznorazne aktivnosti, kao i specijalni popusti za članarinu, kao i poseban program za slabovidne osobe.
 
+![capture2](https://user-images.githubusercontent.com/37112852/37571177-6fc2dc56-2af9-11e8-8842-ce51c38feea7.PNG)
+
+
 Konkretno, EBOOK & EREADER TOOL je aplikacija namijenjena svim korisnicima i posjetiteljima kompleksa Gazi Husrev - begove biblioteke u čijem se sklopu nalazi ogromna biblioteka koja je obogaćena i knjigama za slabovidne osobe,  posebna arhiva sa starim dokumentima, čitaonice, sale za održavanje event-a kao i  prostorije u kojima se vrši doniranje i prodaja knjiga. Biblioteka je također obogaćena i sa još jednim kulturnim sadržajem koji krasi i upotpunjava njenu višestoljetnu tradiciju.To je Muzej sa stalnom postavkom prelijepih, vrlo rijetkih eksponata koji pripadaju kulturnom dobru ovog naroda.
 
 ---
