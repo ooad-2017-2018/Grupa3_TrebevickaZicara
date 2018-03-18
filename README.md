@@ -130,7 +130,7 @@ Brisanje knjige se obavlja opcijom obriši knjigu.
 Za ovu stavku zadužen je bibliotekar. Nabavka knjiga se obavlja dodavanjem knjige na listu za nabavku.  Doniranje knjiga može obaviti bilo ko. Podaci o donoru se ne uzimaju.
 
 **Prodaja knjiga**
-Za ovu stavku zadužen je bibliotekar. Prodaja knjiga
+Za ovu stavku zadužen je bibliotekar.
 
 **Iznajmljivanje knjiga**
 Za ovu stavku zadužen je bibliotekar. Potrebno je unijeti id članske kartice, naziv knjige, autora, isbn, kao i datum vraćanja. 
