@@ -1,4 +1,4 @@
-##Grupa: 3
+##Grupa: 3###
 ##Tim: TrebevićkaŽičara
 
 ---
