@@ -24,6 +24,7 @@ U vrijeme modernog doba, kada se informacije šire enormnim brzinama, čija tač
 Nijedan film, video, nijedna fabula, gif,… ne može zamijeniti osjećaj čitanja jedne knjige. Dobrobiti su bezbrojne, povećavamo naš vokabular, razvijamo maštu, mozak, učimo nove stvari… 
 J.K.Rowling je rekao: 
 >“I do believe that something very magical can happen when you read a good book.”.
+
 Iznenadite Vaš mozak sa nekom dobrom knjigom! 
 
  Cilj razvoja naše aplikacije jeste upravo omogućiti  što je moguće veći pristup Gazi Husrev – begovoj bibilioteci  građanima naše države. Zbog toga želimo da zainteresujemo što veći broj građana, putem raznoraznih event-a koji se održavaju u našim mnogobrojnim prostorijama. Također želimo  olakšati rad, organizaciju i poslovanje ovog organizacionog kompleksa.  Omogućene su raznorazne aktivnosti, kao i specijalni popusti za članarinu, kao i poseban program za slabovidne osobe.
