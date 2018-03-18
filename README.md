@@ -187,9 +187,9 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 
 ###Akteri
 
-Bibliotekar – Osoba koja se brine za dodavanje i brisanje članova biblioteke, organizaciju event-a, nabavku i prodaju knjiga, kao i za njihovo zaduživanje, naplata obilaska muzejskog dijela i posebnih arhiva dokumenata.
-Član biblioteke – Osoba koja može iznajmljivati knjige i koristiti čitaonu.
-Portir – Osoba zadužena za dodjelu brojeva mjesta u čitaonicama, provjera korištenja kartica od strane članova biblioteke i pomaže i upućuje goste da pronađu sale za event-e.
-Gost – Osoba koja može donirati i kupiti knjigu, prisustvovati event-ima, učlaniti se u biblioteku.
-Administracija –Osoba koja može brisati i dodavati zaposlenike. 
-EReader Tool – Editor koji služi za texutalno uređivanje dokumenata.
+-**Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, organizaciju event-a, nabavku i prodaju knjiga, kao i za njihovo zaduživanje, naplata obilaska muzejskog dijela i posebnih arhiva dokumenata.
+-**Član biblioteke** – Osoba koja može iznajmljivati knjige i koristiti čitaonu.
+-**Portir** – Osoba zadužena za dodjelu brojeva mjesta u čitaonicama, provjera korištenja kartica od strane članova biblioteke i pomaže i upućuje goste da pronađu sale za event-e.
+-**Gost** – Osoba koja može donirati i kupiti knjigu, prisustvovati event-ima, učlaniti se u biblioteku.
+-**Administracija** –Osoba koja može brisati i dodavati zaposlenike. 
+-**EReader Tool** – Editor koji služi za texutalno uređivanje dokumenata.
