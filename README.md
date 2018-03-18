@@ -1,20 +1,16 @@
 # Tim: TrebevićkaŽičara
-
 ### Grupa: 3
 
 ---
-
 ### Članovi tima:
 1. Medina Dacić
 2. Mirela Dedić
 3. Damir Dupanović
-
 ---
 
 ## Tema:
-
 ## EBOOK & EREADER TOOL
-
+ ![alt text](https://www.google.ba/search?q=quotes+about+books&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj00svN4PbZAhWiBZoKHWu9C8AQ_AUICigB&biw=1366&bih=637#imgdii=PT9tp8XVgVIVHM:&imgrc=C64p46xk1VJaeM:)
 ---
 
 ### Opis teme:
