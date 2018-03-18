@@ -1,5 +1,6 @@
+#Tim: TrebevićkaŽičara
+
 ##Grupa: 3
-##Tim: TrebevićkaŽičara
 
 ---
 
@@ -11,15 +12,18 @@
 ---
 
 ##Tema:
+
 ##EBOOK & EREADER TOOL
 
 ---
 
 ###Opis teme:
+
 U vrijeme modernog doba, kada se informacije šire enormnim brzinama, čija tačnost u većini slučajeva teži ka nuli, kada su Vaše naslovnice na društvenim mrežama prepune skupom nebitnih i nepovezanih podataka i kada se ljudi više “brinu” za tuđe, nego za svoje živote, postavlja se pitanje, da li ja moram biti kao većina? Mi nismo protiv tehnologije, baš naprotiv! Pravi izazov za savremenog čovjeka postalo je korištenje tehnologije na pravi način.  Ali čekajte, nešto nije uredu, nešto nedostaje… Gdje su nestale te male, dragocijene stvarčice, koje su bile podloga za uspjeh mnogih historijskih pobjeda, poduhvata,  koje datiraju još od vremena drevnih naroda… Ne mislimo valjda na isto? Da! Knjige!
 
 Nijedan film, video, nijedna fabula, gif,… ne može zamijeniti osjećaj čitanja jedne knjige. Dobrobiti su bezbrojne, povećavamo naš vokabular, razvijamo maštu, mozak, učimo nove stvari… 
-J.K.Rowling je rekao: “I do believe that something very magical can happen when you read a good book.”.
+J.K.Rowling je rekao: 
+>“I do believe that something very magical can happen when you read a good book.”.
 Iznenadite Vaš mozak sa nekom dobrom knjigom! 
 
  Cilj razvoja naše aplikacije jeste upravo omogućiti  što je moguće veći pristup Gazi Husrev – begovoj bibilioteci  građanima naše države. Zbog toga želimo da zainteresujemo što veći broj građana, putem raznoraznih event-a koji se održavaju u našim mnogobrojnim prostorijama. Također želimo  olakšati rad, organizaciju i poslovanje ovog organizacionog kompleksa.  Omogućene su raznorazne aktivnosti, kao i specijalni popusti za članarinu, kao i poseban program za slabovidne osobe.
