@@ -10,7 +10,7 @@
 ---
 
 ## Tema:
-## EBOOK & EREADER TOOL
+## GBOOK
 
 ---
 
@@ -31,7 +31,7 @@ Iznenadite Vaš mozak sa nekom dobrom knjigom!
 ![capture2](https://user-images.githubusercontent.com/37112852/37571177-6fc2dc56-2af9-11e8-8842-ce51c38feea7.PNG)
 
 
-Konkretno, EBOOK & EREADER TOOL je aplikacija namijenjena svim korisnicima i posjetiteljima kompleksa Gazi Husrev - begove biblioteke u čijem se sklopu nalazi ogromna biblioteka koja je obogaćena i knjigama za slabovidne osobe,  posebna arhiva sa starim dokumentima, čitaonice, sale za održavanje event-a kao i  prostorije u kojima se vrši doniranje i prodaja knjiga. Biblioteka je također obogaćena i sa još jednim kulturnim sadržajem koji krasi i upotpunjava njenu višestoljetnu tradiciju.To je Muzej sa stalnom postavkom prelijepih, vrlo rijetkih eksponata koji pripadaju kulturnom dobru ovog naroda.
+Konkretno, GBOOKje aplikacija namijenjena svim korisnicima i posjetiteljima kompleksa Gazi Husrev - begove biblioteke u čijem se sklopu nalazi ogromna biblioteka koja je obogaćena i knjigama za slabovidne osobe,  posebna arhiva sa starim dokumentima, čitaonice, sale za održavanje event-a kao i  prostorije u kojima se vrši doniranje i prodaja knjiga. Biblioteka je također obogaćena i sa još jednim kulturnim sadržajem koji krasi i upotpunjava njenu višestoljetnu tradiciju.To je Muzej sa stalnom postavkom prelijepih, vrlo rijetkih eksponata koji pripadaju kulturnom dobru ovog naroda.
 
 ---
 
@@ -129,9 +129,6 @@ Brisanje knjige se obavlja opcijom obriši knjigu.
 **Nabavka i donacija knjiga**
 Za ovu stavku zadužen je bibliotekar. Nabavka knjiga se obavlja dodavanjem knjige na listu za nabavku.  Doniranje knjiga može obaviti bilo ko. Podaci o donoru se ne uzimaju.
 
-**Prodaja knjiga**
-Za ovu stavku zadužen je bibliotekar.
-
 **Iznajmljivanje knjiga**
 Za ovu stavku zadužen je bibliotekar. Potrebno je unijeti id članske kartice, naziv knjige, autora, isbn, kao i datum vraćanja. 
 
@@ -180,7 +177,6 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 -	Organizacija event-a
 -	Unos i brisanje knjige
 -	Nabavka i donacija knjiga
--	Prodaja knjiga
 -	Iznajmljivanje knjiga
 -	Korištenje čitaonica
 -	Davanje brojeva za mjesta u čitaonici
@@ -194,13 +190,13 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 
 ### Akteri
 
-- **Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, organizaciju event-a, nabavku i prodaju knjiga, kao i za njihovo zaduživanje, naplata obilaska muzejskog dijela i posebnih arhiva dokumenata.
+- **Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, organizaciju event-a, nabavku i donaciju knjiga, kao i za njihovo zaduživanje, naplata obilaska muzejskog dijela i posebnih arhiva dokumenata, izdavanje sala.
 
 - **Član biblioteke** – Osoba koja može iznajmljivati knjige i koristiti čitaonu.
 
 - **Portir** – Osoba zadužena za dodjelu brojeva mjesta u čitaonicama, provjera korištenja kartica od strane članova biblioteke i pomaže i upućuje goste da pronađu sale za event-e.
 
-- **Gost** – Osoba koja može donirati i kupiti knjigu, prisustvovati event-ima, učlaniti se u biblioteku.
+- **Gost** – Osoba koja može donirati knjigu, prisustvovati event-ima, učlaniti se u biblioteku, poslati upit za najam sale.
 
 - **Administracija** –Osoba koja može brisati i dodavati zaposlenike. 
 
