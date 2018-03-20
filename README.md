@@ -107,10 +107,6 @@ Nakon registracije člana biblioteke potrebno je kreirati karticu. Na kartici se
 **Brisanje članova biblioteke**
 Brisanje članova biblioteke dozvoljeno je isključivo bibliotekaru. Nakon prijave na sistem postoji opcija “Obriši člana”. Odabirom te opcije, pojavit će se upozorenje da li smo sigurni da želimo obaviti željenu radnju, potrebno je potvrditi započetu radnju.
 
-**Organizacija event-a**
-Za organizaciju event-a zadužen je bibliotekar. 
-Potrebno je da navede  naziv eventa, goste, datum održavanja, vrijeme održavanja,  salu održavanja, kao i opis. 
-Tako kreiran event dostupan je svim korisnicima aplikacije.
 **Unos i brisanje knjige**
 Za ovu stavku zadužen je bibliotekar. Podaci koji se unose su:
 -Naziv
@@ -132,36 +128,11 @@ Za ovu stavku zadužen je bibliotekar. Nabavka knjiga se obavlja dodavanjem knji
 **Iznajmljivanje knjiga**
 Za ovu stavku zadužen je bibliotekar. Potrebno je unijeti id članske kartice, naziv knjige, autora, isbn, kao i datum vraćanja. 
 
-**Pretrage korisnika i sortiranje podataka**
-	Ova stavka dozvoljena je bibliotekaru. Dozvoljne su pretrage i sortiranja na više načina. Za osobe po imenu, prezimenu, za knjige po nazivu, po autoru i po ISBN-u.
+**Pretrage i izvještaji**
+Ova stavka dozvoljena je bibliotekaru. Dozvoljne su pretrage i sortiranja na više načina. Za osobe po imenu, prezimenu, za knjige po nazivu, po autoru i po ISBN-u.Zaposlenim trebaju biti dostupni određeni izvještaji. Kao najmnogobrojnije knijge, najčešće iznajmljivane knijge, broj sati kada su čitaone najposjećenije…
 
 **Korištenje čitaonica**
-Članovima biblioteke dozvoljeno je korištenje čitaonica. Dostupne su dvije čitaonice:  standardna i istraživačka. Potrebno je preuzeti broj mjesta u čitaonici kod portira, i daje se kartica na uvid.  Portir označava određeno mjesto zauzetim. Pri izlasku vraća se broj i portir odznačava zauzeto mjesto.
-
-**Davanje brojeva za mjesta u čitaonici**
-Portir daje i uzima brojeve za mjesta u čitaonici, i označava na aplikaciji koja su mjesta zauzeta. 
-
-**Posjeta muzejskom i arhivskom dijelu**
-Portir naplaćuje kartu.  Evidentira u program koliko karti je prodao i kojeg tipa, odrasli ili djeca.
-
-**Editor za tekstualne dokumente**
-Editor sa kojim se mogu obavljati razne radnje nad tekstualnim dokumentima.
-
-**Izvještaji**
-Zaposlenim trebaju biti dostupni određeni izvještaji. Kao najmnogobrojnije knijge, najčešće iznajmljivane knijge, broj sati kada su čitaone najposjećenije…
-
-**Mapa prikaz kompleksa**
-Svim korisnicima dozvoljena je virtuelna galerija kompleksa.
-
-**Upiti za iznajmljivanje sala**
-Sale kompleksa se mogu iznajmljivati. Potrebno je ulogovati se kao gost i poslati upit za iznajmljivanje sala. 
-Upit sadrži polja: 
--minimalan broj mjesta u sali
--datum
--vrijeme
--broj sati iznajmljivanja sale
-Bibliotekaru stižu upiti. Ovisno o kojoj sali se radi, i na koliko vremena šalje obavijest o cijeni iznajmljivanja.
-Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bibliotekaru, zbog određenih procedura i naplate.
+Članovima biblioteke dozvoljeno je korištenje čitaonica. Dostupne su dvije čitaonice:  standardna i istraživačka. Potrebno je preuzeti broj mjesta u čitaonici kod portira, i daje se kartica na uvid. Portir označava određeno mjesto zauzetim. Pri izlasku vraća se broj i portir odznačava zauzeto mjesto.
 
 ---
 
@@ -174,17 +145,11 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 -	Dodavanje članova biblioteke
 -	Izrada kartica za članove biblioteke
 -	Brisanje članova biblioteke
--	Organizacija event-a
 -	Unos i brisanje knjige
 -	Nabavka i donacija knjiga
 -	Iznajmljivanje knjiga
 -	Korištenje čitaonica
--	Davanje brojeva za mjesta u čitaonici
--	Posjeta muzejskom i arhivskom dijelu
--	Editor za tekstualne dokumente
--	Izvještaji
--	Mapa prikaz kompleksa
--	Upiti za iznajmljivanje sala
+-	Pretrage i izvještaji
 
 ---
 
