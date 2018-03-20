@@ -200,4 +200,3 @@ Ukoliko iznajmljivač želi da iznajmi, onda je potrebno da se obrati lično bib
 
 - **Administracija** –Osoba koja može brisati i dodavati zaposlenike. 
 
-- **EReader Tool** – Editor koji služi za texutalno uređivanje dokumenata.
