@@ -54,7 +54,7 @@ Tip registracije za gosta
 	-Potvrda lozinke
 
 **Prijava na aplikaciju**
-Za prijavu je potrebno unijeti username i lozinku, kao i izvršiti selekciju o kojoj vrsti lica se radi (administracija, zaposlenici, članovi, gosti).
+Za prijavu je potrebno unijeti username i lozinku.
 
 **Promjena lozinke**
 Ukoliko je potrebna promjena lozinke to je moguće uraditi na sljedeći način. Najprije je potrebno prijaviti se. Odabiranjem opcije promjeniti lozinku, potrebno je unijeti staru lozinku, novu lozinku i potvrditi novu lozinku.
@@ -75,7 +75,6 @@ Dodavanje zaposlenika dozvoljeno je isključivo administraciji. Nakon prijave na
 		-Slika 
 		-Tip uposlenika (bibliotekar, administracija, portir)
 		
-Ukoliko zaposlenik nema u elektronskoj formi sliku, potrebno je uslikati ga sa kamerom.
 Nakon popunjavanja svih navedenih podataka i potvrde unosa dobijamo poruku sa username-om i lozinkom zaposlenika.
 
 **Brisanje zaposlenika**
@@ -98,7 +97,6 @@ Dodavanje članova biblioteke dozvoljeno je isključivo bibliotekaru. Nakon prij
 		-Datum učlanjenja
 		-Datum važenja članarine
 
-Ukoliko budući član nema u elektronskoj formi sliku, potrebno je uslikati ga sa kamerom.
 Nakon popunjavanja svih navedenih podataka i potvrde unosa dobijamo poruku sa username-om i lozinkom člana.
 
 **Izrada kartica za članove biblioteke**
@@ -112,13 +110,12 @@ Za ovu stavku zadužen je bibliotekar. Podaci koji se unose su:
 -Naziv
 -Autor
 -Godina izdanja
--Da li je na prodaju (ako jeste otvara se polje cijena)
 -Broj komada na stanju
 -Koliko je zaduženo
 -Izdavač
 -ISBN
 -Slika
--Pdf format
+-Pdf format (ako postoji)
 
 Brisanje knjige se obavlja opcijom obriši knjigu.
 
