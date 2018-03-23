@@ -152,13 +152,11 @@ Ova stavka dozvoljena je bibliotekaru. Dozvoljne su pretrage i sortiranja na vi�
 
 ### Akteri
 
-- **Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, nabavku i donaciju knjiga, kao i za njihovo zaduživanje. Može koristiti sve pretrage i čitati sve izvještaje.
+- **Bibliotekar** – Osoba koja se brine za dodavanje i brisanje članova biblioteke, nabavku i donaciju knjiga, kao i za njihovo zaduživanje. Može koristiti pretrage i čitati izvještaje.
 
-- **Član biblioteke** – Osoba koja može promjeniti svoju lozinku, iznajmljivati knjige i koristiti čitaonu. 
+- **Član biblioteke** – Osoba koja može promjeniti svoju lozinku, pretraživati knjige, pratiti izvještaje vezane za top autore i knjige, iznajmljivati knjige,  koristiti čitaonu. 
 
 - **Portir** – Osoba zadužena za dodjelu brojeva mjesta u čitaonicama i provjeru korištenja kartica od strane članova biblioteke.
 
-- **Gost** – Osoba koja može donirati knjigu i/ili učlaniti se u biblioteku.
-
-- **Administracija** –Osoba koja može brisati i dodavati zaposlenike. Ima pristup pretragama i svim izvještajima. 
+- **Administracija** –Osoba koja može brisati i dodavati zaposlenike. Ima pristup pretragama i izvještajima. 
 
