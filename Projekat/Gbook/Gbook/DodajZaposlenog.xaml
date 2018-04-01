@@ -5,17 +5,28 @@
     xmlns:local="using:Gbook"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="584" Width="1320">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="182,156,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,192,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,231,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,276,0,0" Text="Broj lk:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,326,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,381,0,0" Text="Broj tel.:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="182,428,0,0" Text="Email:" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <Rectangle HorizontalAlignment="Left" Height="318" Margin="160,151,0,0" VerticalAlignment="Top" Width="414" Visibility="Visible" RequestedTheme="Dark"/>
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="128,0,394,0" Height="452" VerticalAlignment="Top">
+        <TextBox HorizontalAlignment="Left" Margin="214,66,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,82,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,126,0,0" Text="Prezime" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,114,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,176,0,0" Text="Jmbg:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,164,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,224,0,0" Text="Br. LK:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,212,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,270,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,258,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,312,0,0" Text="Br. tel.:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,300,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <ComboBox HorizontalAlignment="Left" Margin="214,371,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,383,0,0" Text="Tip:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="224" Margin="480,66,0,0" VerticalAlignment="Top" Width="218" FocusVisualSecondaryBrush="#991F1717"/>
+        <Button Content="Dodaj sliku" HorizontalAlignment="Left" Margin="540,310,0,0" VerticalAlignment="Top"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="460,371,0,0" VerticalAlignment="Top" Width="125"/>
+        <Border BorderBrush="Black" HorizontalAlignment="Left" Height="54" Margin="84,366,0,0" VerticalAlignment="Top" Width="348"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="616,370,0,0" VerticalAlignment="Top" Width="102"/>
+        <Border BorderBrush="Black" HorizontalAlignment="Left" Height="297" Margin="84,45,0,0" VerticalAlignment="Top" Width="348"/>
     </Grid>
 </Page>
