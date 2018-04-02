@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <FlyoutBase.AttachedFlyout>
@@ -14,9 +14,31 @@
         </FlyoutBase.AttachedFlyout>
         <SplitView HorizontalAlignment="Left" Height="100" Margin="212,200,0,0" VerticalAlignment="Top">
             <SplitView.Pane>
+
                 <Grid/>
+
             </SplitView.Pane>
         </SplitView>
+        <Pivot Title="Opcije">
+            <PivotItem Header="Zaposleni">
+                <Image HorizontalAlignment="Left" Height="100" Margin="149,84,0,0" VerticalAlignment="Top" Width="100" Source="Assets/Square150x150Logo.png"/>
+            </PivotItem>
+
+            <PivotItem Header="Izvjestaji">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Pretrage"/>
+        </Pivot>
+        <Button Content="Dodaj zaposlenika" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,294,0,0" AllowDrop="True" Foreground="#FF1B211B" Background="#3354B61C" Width="179"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="737,155,0,0" Width="202"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite ime i prezime zaposlenog:" VerticalAlignment="Top" Margin="728,128,0,0" RenderTransformOrigin="1.5,-6.95"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite JMBG:" VerticalAlignment="Top" Margin="782,210,0,0" Width="155"/>
+        <Button Content="Ažuriraj" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="790,296,0,0"  Width="117"/>
+        <Button Content="Obrisi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="792,348,0,0" Width="114" BorderBrush="#FFC53C3C">
+            <Button.Background>
+                <SolidColorBrush Color="#33B92020" Opacity="1.5"/>
+            </Button.Background>
+        </Button>
 
 
 
