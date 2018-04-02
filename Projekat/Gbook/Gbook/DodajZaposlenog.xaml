@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Gbook.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gbook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="584" Width="1320">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="128,0,394,0" Height="452" VerticalAlignment="Top">
+        <TextBox HorizontalAlignment="Left" Margin="214,66,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,82,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,126,0,0" Text="Prezime" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,114,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,176,0,0" Text="Jmbg:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,164,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,224,0,0" Text="Br. LK:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,212,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,270,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,258,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,312,0,0" Text="Br. tel.:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="214,300,0,0" Text="" VerticalAlignment="Top" Width="180"/>
+        <ComboBox HorizontalAlignment="Left" Margin="214,371,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,383,0,0" Text="Tip:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="224" Margin="480,66,0,0" VerticalAlignment="Top" Width="218" FocusVisualSecondaryBrush="#991F1717"/>
+        <Button Content="Dodaj sliku" HorizontalAlignment="Left" Margin="540,310,0,0" VerticalAlignment="Top"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="460,371,0,0" VerticalAlignment="Top" Width="125"/>
+        <Border BorderBrush="Black" HorizontalAlignment="Left" Height="54" Margin="84,366,0,0" VerticalAlignment="Top" Width="348"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="616,370,0,0" VerticalAlignment="Top" Width="102"/>
+        <Border BorderBrush="Black" HorizontalAlignment="Left" Height="297" Margin="84,45,0,0" VerticalAlignment="Top" Width="348"/>
+    </Grid>
+</Page>
