@@ -19,31 +19,75 @@
 
             </SplitView.Pane>
         </SplitView>
-        <Pivot Title="Opcije">
-            <PivotItem Header="Zaposleni">
-                <Image HorizontalAlignment="Left" Height="100" Margin="149,84,0,0" VerticalAlignment="Top" Width="100" Source="Assets/Square150x150Logo.png"/>
+
+
+        <Pivot Title="Administracija" Foreground="#FF151915">
+            <PivotItem Header="Zaposleni" Foreground="#FF151915">
+                <Grid>
+                    <TextBlock Foreground="#FF151915" FontSize="20" HorizontalAlignment="Left" Margin="860,120,0,0" Text="Unesite ime i prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock Foreground="#FF151915" FontSize="20" HorizontalAlignment="Left" Margin="880,200,0,0" Text="Unesite JMBG:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+                    <TextBox HorizontalAlignment="Left" Margin="810,150,0,0" Text="" VerticalAlignment="Top"  Width="260" Height="32"/>
+                    <TextBox HorizontalAlignment="Left" Margin="810,230,0,0" Text="" VerticalAlignment="Top"  Width="260" Height="32"/>
+
+                    <Button Background="#FFF06D13" Foreground="#FF151412" Content="Ažuriraj" HorizontalAlignment="Left" Margin="837,300,0,0" VerticalAlignment="Top" Width="84"/>
+                    <Button Background="#FFE83316" Foreground="Black" Content="Obriši" HorizontalAlignment="Left" Margin="950,300,0,0" VerticalAlignment="Top" Width="83"/>
+
+                    <Button Background="#FF47CB15" Foreground="#FF141712" Content="Dodaj zaposlenog" HorizontalAlignment="Left" Margin="250,200,0,0" VerticalAlignment="Top" Width="171" Height="48"/>
+                    <Image HorizontalAlignment="Left" Height="59" Margin="320,136,0,0" VerticalAlignment="Top" Width="45" Source="Assets/blue-bits-bonus-icons - Copy (7) - Copy.jpg" RenderTransformOrigin="1.633,0.492"/>
+
+
+
+
+                </Grid>
             </PivotItem>
 
-            <PivotItem Header="Izvjestaji">
-                <Grid/>
+
+            <PivotItem Header="Izvjestaji" Foreground="#FF151915">
+                <Grid>
+                    <TextBlock Foreground="#FF151915" FontSize="20" HorizontalAlignment="Left" Margin="160,80,0,0" Text="Odaberite izvještaj:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+                    <Button Background="#FF47CB15" Foreground="#FF141712" Content="Prikazi izvjestaj" HorizontalAlignment="Left" Margin="161,261,0,0" VerticalAlignment="Top" Width="171" Height="48"/>
+
+                    <ComboBox HorizontalAlignment="Left" Margin="116,173,0,0" VerticalAlignment="Top" Height="24" Width="260"/>
+                    <TextBox HorizontalAlignment="Left" Margin="525,77,0,0" Text="" VerticalAlignment="Top"  Width="885" Height="742"/>
+
+
+
+                </Grid>
             </PivotItem>
-            <PivotItem Header="Pretrage"/>
+
+            <PivotItem Header="Pretrage" Foreground="#FF151915">
+                <Grid>
+                    <TextBlock Foreground="#FF151915" FontSize="20" HorizontalAlignment="Left" Margin="160,80,0,0" Text="Unesite ime i prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="115,157,0,0" Text="" VerticalAlignment="Top"  Width="285" Height="42"/>
+
+
+                    <Button Background="#FF154FCB" Foreground="#FF141712" Content="Pretraga" HorizontalAlignment="Left" Margin="161,261,0,0" VerticalAlignment="Top" Width="171" Height="48" FontWeight="Bold"/>
+
+                    
+                    <TextBox HorizontalAlignment="Left" Margin="525,77,0,0" Text="" VerticalAlignment="Top"  Width="885" Height="742"/>
+
+
+
+                </Grid>
+            </PivotItem>
+
+
+
+
+
+
+
+
+
+
+           
+                   
+        
         </Pivot>
-        <Button Content="Dodaj zaposlenika" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,294,0,0" AllowDrop="True" Foreground="#FF1B211B" Background="#3354B61C" Width="179"/>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="737,155,0,0" Width="202"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite ime i prezime zaposlenog:" VerticalAlignment="Top" Margin="728,128,0,0" RenderTransformOrigin="1.5,-6.95"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite JMBG:" VerticalAlignment="Top" Margin="782,210,0,0" Width="155"/>
-        <Button Content="Ažuriraj" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="790,296,0,0"  Width="117"/>
-        <Button Content="Obrisi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="792,348,0,0" Width="114" BorderBrush="#FFC53C3C">
-            <Button.Background>
-                <SolidColorBrush Color="#33B92020" Opacity="1.5"/>
-            </Button.Background>
-        </Button>
-
-
-
-
-
 
     </Grid>
 </Page>

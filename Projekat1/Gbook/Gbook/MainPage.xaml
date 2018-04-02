@@ -8,10 +8,12 @@
     mc:Ignorable="d" Height="606" Width="650">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light" BorderBrush="#FFD62222">
-        <TextBlock HorizontalAlignment="Left" Margin="207,222,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="207,254,0,0" TextWrapping="Wrap" Text="Lozinka:" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="330,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.239,-0.219" Height="17" Width="155"/>
-        <Button Content="Prijava" HorizontalAlignment="Left" Margin="361,298,0,0" VerticalAlignment="Top" Width="91"  Foreground="#FF151010" Background="#FF21BB28"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="331,254,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image Source="Assets\1378369_10151612303462273_677623648_n.jpg" Margin="-101,-81,-173,-83"/>
+        <TextBlock HorizontalAlignment="Left" Margin="295,82,0,0" TextWrapping="Wrap" Text="Korisničko ime:" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Book Antiqua"/>
+        <TextBlock HorizontalAlignment="Left" Margin="342,125,0,0" TextWrapping="Wrap" Text="Lozinka:" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Book Antiqua"/>
+        <TextBox HorizontalAlignment="Left" Margin="409,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.239,-0.219" Height="17" Width="155"/>
+        <Button Content="Prijava" HorizontalAlignment="Left" Margin="445,170,0,0" VerticalAlignment="Top" Width="91"  Foreground="#FF151010" Background="#FF21BB28" FontWeight="Bold" FontStyle="Normal" FontFamily="Book Antiqua"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="411,120,0,0" VerticalAlignment="Top" Width="154"/>
+        <Rectangle HorizontalAlignment="Left" Height="164" Margin="258,51,0,0" VerticalAlignment="Top" Width="338" Stroke="#FF36B222" StrokeThickness="4" RequestedTheme="Light"/>
     </Grid>
 </Page>
