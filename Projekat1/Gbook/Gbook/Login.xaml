@@ -1,4 +1,6 @@
-﻿<Page
+﻿<!-- created by: Mirela Dedic
+     created on: 25.04.2018 -->
+    <Page
     x:Class="WinApp_Gbook.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
