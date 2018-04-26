@@ -59,7 +59,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="4" Grid.Column="1">
-            <Button Name="SingInButton" Click="button_click" Content="Sing in" HorizontalAlignment="Center" Width="100"  Background="Blue" FontSize="11"></Button>
+            <Button Name="SingInButton" Click="button_click" Content="Sing in" HorizontalAlignment="Center" Width="100"  Background="WhiteSmoke" FontSize="11"></Button>
         </StackPanel>
 
         <!-- <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#152951"/>

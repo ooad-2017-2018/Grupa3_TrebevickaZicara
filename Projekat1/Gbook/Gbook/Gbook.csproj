@@ -104,11 +104,17 @@
     <Compile Include="dodajZaposlenog.xaml.cs">
       <DependentUpon>dodajZaposlenog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Kartica.xaml.cs">
+      <DependentUpon>Kartica.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nav.xaml.cs">
+      <DependentUpon>Nav.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +127,8 @@
   <ItemGroup>
     <Content Include="Assets\1378369_10151612303462273_677623648_n.jpg" />
     <Content Include="Assets\blue-bits-bonus-icons - Copy %287%29 - Copy.jpg" />
+    <Content Include="image\barcode.gif" />
+    <Content Include="image\flow.jpg" />
     <Content Include="image\img.png" />
     <Content Include="image\images.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -153,6 +161,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Kartica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +172,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Nav.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
