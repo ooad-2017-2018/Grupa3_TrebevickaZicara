@@ -104,16 +104,25 @@
     <Compile Include="dodajZaposlenog.xaml.cs">
       <DependentUpon>dodajZaposlenog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Kartica.xaml.cs">
+    <Compile Include="Model\Biblioteka.cs" />
+    <Compile Include="Model\Bibliotekar.cs" />
+    <Compile Include="Model\Citaona.cs" />
+    <Compile Include="Model\Clan.cs" />
+    <Compile Include="Model\Kartica.cs" />
+    <Compile Include="Model\Knjiga.cs" />
+    <Compile Include="Model\OsobaINFO.cs" />
+    <Compile Include="Model\Portir.cs" />
+    <Compile Include="Model\Zaposlenik.cs" />
+    <Compile Include="View\Kartica.xaml.cs">
       <DependentUpon>Kartica.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Nav.xaml.cs">
+    <Compile Include="View\Nav.xaml.cs">
       <DependentUpon>Nav.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,19 +170,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Kartica.xaml">
+    <Page Include="View\Kartica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login.xaml">
+    <Page Include="View\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Nav.xaml">
+    <Page Include="View\Nav.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +191,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View Model\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

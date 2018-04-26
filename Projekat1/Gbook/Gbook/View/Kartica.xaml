@@ -1,4 +1,6 @@
-﻿<Page
+﻿<!-- Created by Mirela Dedic
+     Created on 26.04.2018 -->
+<Page
     x:Class="WinApp_Gbook.Kartica"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
