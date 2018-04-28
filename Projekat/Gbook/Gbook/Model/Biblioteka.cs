@@ -17,7 +17,7 @@ namespace Gbook.Model
         private List<Kartica> kartice;
         private List<Knjiga> knjige;
         private List<Citaona> citaone;
-
+        
         public Biblioteka()
         {
             zaposlenici = new List<Zaposlenik>();
@@ -26,5 +26,15 @@ namespace Gbook.Model
             knjige = new List<Knjiga>();
             citaone = new List<Citaona>();
         }
+
+        public void DodajZaposlenika(Bibliotekar b) { }
+        public void DodajZaposlenika(Portir p) { }
+        public Zaposlenik PretraziZaposlenika(Zaposlenik z) { return 0;  }
+        public void IzvjestajZaposlenici() { }
+        public void KreirajSifruKorisnika(){  }
+
+
+
+
     }
 }
