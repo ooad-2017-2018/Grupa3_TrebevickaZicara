@@ -1,10 +1,10 @@
 ﻿<!-- Created by Mirela Dedic
      Created on 26.04.2018 -->
 <Page
-    x:Class="WinApp_Gbook.Kartica"
+    x:Class="Gbook.KarticaModel"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:WinApp_Gbook"
+    xmlns:local="using:Gbook"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -15,7 +15,7 @@
                 <Image Source ="../images/flow.jpg" Width="300"/>
             </StackPanel>
 
-            <StackPanel  Name ="liceKartice" RelativePanel.RightOf="Kartica" Margin="0,20,0,0">
+            <StackPanel  Name ="liceKartice" RelativePanel.RightOf="KarticaModel" Margin="0,20,0,0">
                 <TextBox x:Name="imePrezimeKartice" Header= "Ime I Prezime" Margin="0,10,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
                 <TextBox x:Name="idBrojKartice" Header="Clanski Broj" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
             </StackPanel>
@@ -28,7 +28,7 @@
             </StackPanel>
 
             <StackPanel RelativePanel.Below="Kartica" >
-                <Button Name="Napravi" Click="napraviKarticuZ_click" Content="Napravi" Margin="700,80,0,10"  Width="100" HorizontalAlignment="Center" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
+                <Button Name="Napravi" Content="Napravi" Margin="700,80,0,10"  Width="100" HorizontalAlignment="Center" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
             </StackPanel>
         </RelativePanel>
     </Grid>

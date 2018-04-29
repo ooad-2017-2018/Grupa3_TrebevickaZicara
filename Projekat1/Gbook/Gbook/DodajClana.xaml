@@ -19,9 +19,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="76,295,0,0" Text="Dat. uclanjenja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="76,320,0,0" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="203" Margin="424,72,0,0" VerticalAlignment="Top" Width="197">
-            <Image.FocusVisualPrimaryBrush>
-                <SolidColorBrush Color="Black" Opacity="1"/>
-            </Image.FocusVisualPrimaryBrush>
+           
         </Image>
         <RadioButton Content="Muško" HorizontalAlignment="Left" Margin="127,367,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Žensko" HorizontalAlignment="Left" Margin="252,367,0,0" VerticalAlignment="Top"/>
