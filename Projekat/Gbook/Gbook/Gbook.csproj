@@ -130,9 +130,6 @@
     <Compile Include="View\Prijava2View.xaml.cs">
       <DependentUpon>Prijava2View.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PrijavaView.xaml.cs">
-      <DependentUpon>PrijavaView.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -189,10 +186,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Prijava2View.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\PrijavaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
