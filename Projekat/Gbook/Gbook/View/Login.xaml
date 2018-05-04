@@ -15,7 +15,7 @@
               Width="300">
 
             <StackPanel x:Name="LoginPanel">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+                <Grid Background="LightGreen"
                       RequestedTheme="Light" BorderBrush="#FFD62222">
                     
                     <TextBlock HorizontalAlignment="Left"
@@ -46,8 +46,8 @@
                             Margin="120,140,0,0" 
                             VerticalAlignment="Top"
                             Width="91"  
-                            Foreground="#FF151010" 
-                            Background="#FF21BB28" 
+                             
+                            Background="Green"
                             FontWeight="Bold" 
                             FontFamily="Book Antiqua"/>
                     
@@ -61,7 +61,7 @@
                                Margin="0,0" 
                                VerticalAlignment="Top"
                                Width="300" 
-                               Stroke="#FF36B222" 
+                               Stroke="Black" 
                                StrokeThickness="4" 
                                RequestedTheme="Light"/>
                 </Grid>
