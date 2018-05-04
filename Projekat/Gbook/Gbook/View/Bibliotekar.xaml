@@ -109,7 +109,7 @@
 
             
             
-            <PivotItem Header="Obrisi clana" Margin="0">
+            <PivotItem Header="Brisanje i ažuriranje člana" Margin="0">
                 <Grid Background="White">
                     <RelativePanel>
                         <StackPanel x:Name="Obrisiclana" 
@@ -124,13 +124,17 @@
                                      Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
                             <TextBox x:Name="PrezimeObrisanog" Header="Prezime" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
                             <RelativePanel>
-                                <Button Name="ObrisiButton"  Content="Obrisi" Width="100" Margin="120,10,10,10" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
+                                <Button Name="ObrisiButton"  Content="Obriši" Width="100" Margin="150,10,10,10" Background="Red" Height ="40"></Button>
+                                <Button Name="Azuriraj"  Content="Ažuriraj" Width="100" Margin="10,10,10,10" Background="Yellow" Height ="40"></Button>
                                 <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
                             </RelativePanel>
                         </StackPanel>
                     </RelativePanel>
                 </Grid>
             </PivotItem>
+
+         
+
 
             <PivotItem Header="Iskaznica">
                 <Grid Background="White">
@@ -210,8 +214,16 @@
                                      HorizontalAlignment="Left" 
                                      InputScope="AlphanumericFullWidth" />
 
+                            <StackPanel x:Name="slikak" Margin="30" RelativePanel.RightOf="Dodajknjigu">
+                                <Image Source ="../image/flow.jpg" Width="300"/>
+                                <RelativePanel>
+                                    <Button  Name="DodajSlikuk"  Content="Dodaj Sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                    <Button  Name="PonistiSlikuk" RelativePanel.RightOf="DodajSlikuk" Content="Ponisti Sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                </RelativePanel>
+                            </StackPanel>
 
-                    <Button Name="Spasi_knjigu" 
+
+                            <Button Name="Spasi_knjigu" 
                             Content="Spasi" 
                             Width="100"
                             Margin="180,10,10,10"
@@ -234,6 +246,33 @@
                     </RelativePanel>
                 </Grid>
             </PivotItem>
+
+
+            <PivotItem Header="Brisanje i ažuriranje knjige" Margin="0">
+                <Grid Background="White">
+                    <RelativePanel>
+                        <StackPanel x:Name="Obrisiknjigu" 
+                                    Margin="20,5,0,0"
+                                    BorderThickness="1" 
+                                    BorderBrush="Black">
+
+                            <TextBox x:Name="Naslov_k" 
+                                     Header= "Naslov" 
+                                     Margin="0,5,0,0" 
+                                     MaxLength="320"
+                                     Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                            <TextBox x:Name="isbn_b" Header="ISBN" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
+                            <RelativePanel>
+                                <Button Name="Obrisik"  Content="Obrisi knjigu" Width="120" Background="Red" Margin="150,10,10,10"  Height ="40"></Button>
+                                <Button Name="Azurirajk"  Content="Ažuriraj" Width="100" Margin="10,10,10,10" Background="Yellow" Height ="40"></Button>
+
+                                <Button Name="Ponistik" Content="Ponisti"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" RelativePanel.RightOf="Obrisik" Width="100" Margin="30,10,5,5"  Height ="40"></Button>
+                            </RelativePanel>
+                        </StackPanel>
+                    </RelativePanel>
+                </Grid>
+            </PivotItem>
+
 
 
             <PivotItem Header="Izvjestaji">
