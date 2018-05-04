@@ -214,13 +214,7 @@
                                      HorizontalAlignment="Left" 
                                      InputScope="AlphanumericFullWidth" />
 
-                            <StackPanel x:Name="slikak" Margin="30" RelativePanel.RightOf="Dodajknjigu">
-                                <Image Source ="../image/flow.jpg" Width="300"/>
-                                <RelativePanel>
-                                    <Button  Name="DodajSlikuk"  Content="Dodaj Sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
-                                    <Button  Name="PonistiSlikuk" RelativePanel.RightOf="DodajSlikuk" Content="Ponisti Sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
-                                </RelativePanel>
-                            </StackPanel>
+                           
 
 
                             <Button Name="Spasi_knjigu" 
@@ -243,6 +237,14 @@
 
 
                     </StackPanel>
+                        <StackPanel x:Name="slikak" Margin="50, 20" RelativePanel.RightOf="Dodajknjigu">
+                            <Image Source ="../image/flow.jpg" Width="300"/>
+                            <RelativePanel>
+                                <Button  Name="DodajSlikuk"  Content="Dodaj Sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                <Button  Name="PonistiSlikuk" RelativePanel.RightOf="DodajSlikuk" Content="Ponisti Sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                            </RelativePanel>
+                        </StackPanel>
+                        
                     </RelativePanel>
                 </Grid>
             </PivotItem>
