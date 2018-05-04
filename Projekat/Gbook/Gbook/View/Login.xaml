@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="Gbook.View.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gbook.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="50 ,200,100,100"
+          Background="white"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Center"
+              Width="300">
+
+            <StackPanel x:Name="LoginPanel">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+                      RequestedTheme="Light" BorderBrush="#FFD62222">
+                    
+                    <TextBlock HorizontalAlignment="Left"
+                               Margin="10,20" 
+                               Text="Korisničko ime:" 
+                               VerticalAlignment="Top" 
+                               FontWeight="Bold"
+                               FontFamily="Book Antiqua"/>
+                    
+                    <TextBlock HorizontalAlignment="Left" 
+                               Margin="30,70" 
+                               TextWrapping="Wrap" 
+                               Text="Lozinka:" 
+                               VerticalAlignment="Top" 
+                               FontWeight="Bold" 
+                               FontFamily="Book Antiqua"/>
+                    
+                    <TextBox HorizontalAlignment="Left"
+                             Margin="139,20,0,20" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalAlignment="Top" 
+                             RenderTransformOrigin="0.239,-0.219" 
+                             Height="17" Width="155"/>
+                    
+                    <Button Content="Prijava" 
+                            HorizontalAlignment="Left" 
+                            Margin="120,140,0,0" 
+                            VerticalAlignment="Top"
+                            Width="91"  
+                            Foreground="#FF151010" 
+                            Background="#FF21BB28" 
+                            FontWeight="Bold" 
+                            FontFamily="Book Antiqua"/>
+                    
+                    <PasswordBox HorizontalAlignment="Left"
+                                 Margin="139,70, 0, 20"
+                                 VerticalAlignment="Top" 
+                                 Width="154"/>
+                    
+                    <Rectangle HorizontalAlignment="Left" 
+                               Height="204" 
+                               Margin="0,0" 
+                               VerticalAlignment="Top"
+                               Width="300" 
+                               Stroke="#FF36B222" 
+                               StrokeThickness="4" 
+                               RequestedTheme="Light"/>
+                </Grid>
+
+
+            </StackPanel>
+
+        </Grid>
+
+
+    </Grid>
+</Page>

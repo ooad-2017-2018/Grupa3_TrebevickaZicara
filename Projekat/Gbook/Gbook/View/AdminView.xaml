@@ -72,8 +72,8 @@
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel Name="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
-                                <TextBox x:Name="Zaposlenik" Header= "Ime i Prezime" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                                <TextBox x:Name="Funkcija" Header= "Bibliotekar/Portir" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                                <TextBox x:Name="Zaposlenik" Header= "Ime i Prezime:" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                                <TextBox x:Name="Funkcija" Header= "Portir/bibliotekar:" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
                             </StackPanel>
 
                             <StackPanel RelativePanel.RightOf="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
