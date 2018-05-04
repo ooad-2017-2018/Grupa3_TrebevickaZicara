@@ -14,7 +14,7 @@ namespace Gbook.Model
     {
         private List<ClanModel> clanovi;
         private List<KnjigaModel> knjige;
-        public BibliotekarModel(OsobaINFOModel info, DateTime datumZaposlenja, double plata) : base(info, datumZaposlenja, plata)
+        public BibliotekarModel(BibliotekaModel b, OsobaINFOModel info, DateTime datumZaposlenja, double plata) : base(b, info, datumZaposlenja, plata)
         {
             clanovi = new List<ClanModel>();
             knjige = new List<KnjigaModel>();

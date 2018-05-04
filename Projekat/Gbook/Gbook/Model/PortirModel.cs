@@ -14,7 +14,7 @@ namespace Gbook.Model
     {
         private List<ClanModel> clanovi;
         private List<CitaonaModel> citaone;
-        public PortirModel(OsobaINFOModel info, DateTime datumZaposlenja, double plata) : base(info, datumZaposlenja, plata)
+        public PortirModel(BibliotekaModel b, OsobaINFOModel info, DateTime datumZaposlenja, double plata) : base(b, info, datumZaposlenja, plata)
         {
             clanovi = new List<ClanModel>();
             citaone = new List<CitaonaModel>();

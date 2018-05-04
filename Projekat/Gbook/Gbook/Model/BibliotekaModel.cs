@@ -12,7 +12,7 @@ namespace Gbook.Model
 {
     class BibliotekaModel
     {
-        private List<ZaposlenikModel> zaposlenici;
+        public List<ZaposlenikModel> zaposlenici;
         private List<ClanModel> clanovi;
         private List<KarticaModel> kartice;
         private List<KnjigaModel> knjige;
