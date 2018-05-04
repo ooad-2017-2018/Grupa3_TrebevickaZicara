@@ -109,9 +109,6 @@
     <Compile Include="Model\ZaposlenikModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AdminDodajViewModel.cs" />
-    <Compile Include="View\AdministracijaView.xaml.cs">
-      <DependentUpon>AdministracijaView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
     </Compile>
@@ -135,9 +132,6 @@
     </Compile>
     <Compile Include="View\Portir.xaml.cs">
       <DependentUpon>Portir.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Prijava2View.xaml.cs">
-      <DependentUpon>Prijava2View.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -170,10 +164,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\AdministracijaView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\AdminView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -203,10 +193,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Portir.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Prijava2View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

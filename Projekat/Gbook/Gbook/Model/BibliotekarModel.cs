@@ -36,7 +36,7 @@ namespace Gbook.Model
 
         }
 
-        public void AzuirajClana(string ime, string prezime, long jmbg, DateTime datumRodjenja, string adresa, long brojTel, string kategorija, DateTime datumUclanjenja, DateTime vaziDo)
+        public void AzurirajClana(string ime, string prezime, long jmbg, DateTime datumRodjenja, string adresa, long brojTel, string kategorija, DateTime datumUclanjenja, DateTime vaziDo)
         {
             foreach (ClanModel i in clanovi)
                 if (i.Info.Ime == ime && i.Info.Prezime == prezime && i.Info.Jmbg==jmbg)
