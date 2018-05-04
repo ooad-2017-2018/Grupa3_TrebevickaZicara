@@ -17,13 +17,28 @@ namespace Gbook.Model
         private DateTime datumUclanjenja;
         private DateTime vaziDo;
         private List<KnjigaModel> knjige;
+
         public ClanModel(OsobaINFOModel info, string kategorija, DateTime datumUclanjenja, DateTime vaziDo)
         {
-            this.info = info;
-            this.kategorija = kategorija;
-            this.datumUclanjenja = datumUclanjenja;
-            this.vaziDo = vaziDo;
-            knjige = new List<KnjigaModel>();
+            this.Info = info;
+            this.Kategorija = kategorija;
+            this.DatumUclanjenja = datumUclanjenja;
+            this.VaziDo = vaziDo;
+            Knjige = new List<KnjigaModel>();
+        }
+
+        public OsobaINFOModel Info { get => info; set => info = value; }
+        public string Kategorija { get => kategorija; set => kategorija = value; }
+        public DateTime DatumUclanjenja { get => datumUclanjenja; set => datumUclanjenja = value; }
+        public DateTime VaziDo { get => vaziDo; set => vaziDo = value; }
+        internal List<KnjigaModel> Knjige { get => knjige; set => knjige = value; }
+
+        public void Azuriraj(OsobaINFOModel info, string kategorija, DateTime datumUclanjenja, DateTime vaziDo)
+        {
+            Info = info;
+            Kategorija = kategorija;
+            DatumUclanjenja = datumUclanjenja;
+            VaziDo = vaziDo;
         }
     }
 }
