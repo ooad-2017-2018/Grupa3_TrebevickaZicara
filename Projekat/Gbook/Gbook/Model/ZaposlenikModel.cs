@@ -11,13 +11,16 @@ namespace Gbook.Model
         private OsobaINFOModel info;
         private DateTime datumZaposlenja;
         private double plata;
-
+        
         public ZaposlenikModel(OsobaINFOModel info, DateTime datumZaposlenja, double plata)
         {
             this.info = info;
             this.datumZaposlenja = datumZaposlenja;
             this.plata = plata;
         }
+
+        public DateTime DatumZaposlenja { get; set; }
+        public double Plata { get; set;  }
     }
 }
 

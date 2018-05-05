@@ -35,7 +35,7 @@
                             </StackPanel>
 
                             <StackPanel x:Name="slikaZaposlenika" Margin="30" RelativePanel.RightOf="DodajZaposlenika">
-                                <Image Source ="../image/flow.jpg" Width="300"/>
+                                <Image Source ="../Slike/flow.jpg" Width="300"/>
                                 <RelativePanel>
                                     <Button  Name="DodajSlikuButton"  Content="Dodaj Sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
                                     <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti Sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>

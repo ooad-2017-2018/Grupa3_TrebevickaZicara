@@ -23,14 +23,23 @@ namespace Gbook.Model
 
         public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, char spol)
         {
-            this.ime = ime;
-            this.prezime = prezime;
-            this.jmbg = jmbg;
-            this.datumRodjenja = datumRodjenja;
-            this.grad = grad;
-            this.adresa = adresa;
-            this.brojTel = brojTel;
-            this.spol = spol;
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.Jmbg = jmbg;
+            this.DatumRodjenja = datumRodjenja;
+            this.Grad = grad;
+            this.Adresa = adresa;
+            this.BrojTel = brojTel;
+            this.Spol = spol;
         }
+
+        public string Ime { get => ime; set => ime = value; }
+        public string Prezime { get => prezime; set => prezime = value; }
+        public long Jmbg { get => jmbg; set => jmbg = value; }
+        public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
+        public string Grad { get => grad; set => grad = value; }
+        public string Adresa { get => adresa; set => adresa = value; }
+        public long BrojTel { get => brojTel; set => brojTel = value; }
+        public char Spol { get => spol; set => spol = value; }
     }
 }
