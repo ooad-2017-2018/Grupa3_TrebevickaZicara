@@ -26,5 +26,10 @@ namespace Gbook
         {
             this.InitializeComponent();
         }
+
+        private void DodajSlikuButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
