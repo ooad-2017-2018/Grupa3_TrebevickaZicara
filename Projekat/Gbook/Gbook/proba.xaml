@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-   
+
+
+    
 
         <Grid >
 
@@ -79,6 +81,14 @@
 
 
 
+
+
+
+
+                            </StackPanel>
+
+
+                            <StackPanel x:Name="slikaZaposlenika" Margin="30" RelativePanel.RightOf="Dodajclana">
                                 <DatePicker x:Name="Datumuclanjenja" 
                                         Header="Datum učlanjenja" 
                                         HorizontalAlignment="Left"
@@ -87,20 +97,16 @@
 
 
 
-                            </StackPanel>
-
-
-                            <StackPanel x:Name="slikaZaposlenika" Margin="30" RelativePanel.RightOf="Dodajclana">
-                                <Image Source ="../image/flow.jpg" Width="300"/>
                                 <RelativePanel>
-                                    <Button  Name="DodajSlikuButton"  Content="Dodaj Sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Click="DodajSlikuButton_Click"></Button>
-                                    <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti Sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                    <Button  Name="DodajSlikuButton"  Content="Dodaj sliku" Margin="30,50,20,10" Width="100"  Background="Green" FontSize="11"></Button>
+                                    <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti" Margin="30,50,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                    <Image Source ="../image/flow.jpg" Margin="90,130" Width="150" Height="150"/>
                                 </RelativePanel>
                             </StackPanel>
 
                             <StackPanel  Margin="30,10,30,30"  RelativePanel.RightOf="Dodajclana" RelativePanel.Below="slikaZaposlenika">
-                                <RelativePanel Margin="30,310,10,10">
-                                    <Button Name="Dodaj" Content="Dodaj" Margin="30,10,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
+                                <RelativePanel Margin="30,-160,10,10">
+                                    <Button Name="Dodaj" Content="Dodaj člana" Margin="30,10,0,10"  Width="100"  Background="Green" FontSize="11" Height="38"></Button>
                                     <Button  Name="Ponisti" RelativePanel.RightOf="Dodaj"  Content="Ponisti" Margin="10,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
                                 </RelativePanel>
                             </StackPanel>
@@ -148,7 +154,7 @@
 
                             <StackPanel RelativePanel.RightOf="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
                                 <Image Source="..\image\img.png" Width="150" Height="109" />
-                            <TextBlock HorizontalAlignment="Center">slika</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">slika</TextBlock>
                             </StackPanel>
 
                             <StackPanel RelativePanel.Below="IskaznicaLice">
@@ -233,20 +239,20 @@
                               Background="Red"
                              Height ="40"></Button>
 
-                            
 
 
 
 
 
 
-                        </StackPanel>
+
+                            </StackPanel>
                             <StackPanel x:Name="slikak" Margin="50, 20" RelativePanel.RightOf="Dodajknjigu">
                                 <Image Source ="../image/flow.jpg" Width="300"/>
                                 <RelativePanel>
                                     <Button  Name="DodajSlikuk"  Content="Dodaj sliku" Margin="10,10,20,10" Width="80"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
-                                <Image Source="..\image\img.png" Width="150" Margin="-25, 70 " Height="109" />
-                            </RelativePanel>
+                                    <Image Source="..\image\img.png" Width="150" Margin="-25, 70 " Height="109" />
+                                </RelativePanel>
                             </StackPanel>
 
                         </RelativePanel>
