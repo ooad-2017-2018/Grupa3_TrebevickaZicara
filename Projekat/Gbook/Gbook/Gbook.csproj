@@ -118,6 +118,9 @@
     <Compile Include="View\Bibliotekar.xaml.cs">
       <DependentUpon>Bibliotekar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Clan.xaml.cs">
+      <DependentUpon>Clan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DodajClanaView.xaml.cs">
       <DependentUpon>DodajClanaView.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Bibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Clan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

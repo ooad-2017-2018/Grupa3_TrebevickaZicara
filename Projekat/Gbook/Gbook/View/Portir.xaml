@@ -7,7 +7,74 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid >
 
+        <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
+            <Pivot.TitleTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="gBook - Portir" Style="{ThemeResource HeaderTextBlockStyle}"/>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.TitleTemplate>
+            <PivotItem Margin="0">
+                <Grid  Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Horizontal" Background="White" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                            <StackPanel Height="400" VerticalAlignment="Top" Margin="0,0,30,0">
+                                <TextBlock Text="Odaberite" TextWrapping="Wrap" Margin="50,50,0,50"/>
+                                <RadioButton Content="Standradna" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,0,0,50"/>
+                                <RadioButton Content="Istraživačka" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,0,0,50"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Height="400" Width="120" VerticalAlignment="Top">
+                                <CheckBox Content="Sjedište 1/A" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 2/A" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 3/A" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 4/A" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 5/A" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Height="400" Width="120" VerticalAlignment="Top">
+                                <CheckBox Content="Sjedište 1/B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 2/B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 3/B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 4/B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 5/B" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Height="400" Width="120" VerticalAlignment="Top">
+                                <CheckBox Content="Sjedište 1/C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 2/C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 3/C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 4/C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 5/C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Left" Height="400" Width="120" VerticalAlignment="Top">
+                                <CheckBox Content="Sjedište 1/D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 2/D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 3/D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 4/D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                                <CheckBox Content="Sjedište 5/D" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+                            </StackPanel>
+                            <Button Content="Spasi" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="55,300,0,0" Width="100"/>
+                            <Button Content="Odustani" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="35,300,0,0" Width="70"/>
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+
+
+                </Grid>
+            </PivotItem>
+
+
+        </Pivot>
     </Grid>
+
+
+
+
+
+
+
+
+
 </Page>
