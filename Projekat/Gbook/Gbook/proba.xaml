@@ -22,7 +22,7 @@
                     </DataTemplate>
                 </Pivot.TitleTemplate>
                 <PivotItem Header="Dodaj clana" Margin="0">
-
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <!--Form Example-->
                     <Grid Background="White">
                         <RelativePanel >
@@ -113,11 +113,14 @@
 
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
 
 
                 <PivotItem Header="Brisanje i ažuriranje člana" Margin="0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel x:Name="Obrisiclana" 
@@ -139,12 +142,15 @@
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
 
 
 
                 <PivotItem Header="Iskaznica">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel Name="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
@@ -165,10 +171,12 @@
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
                 <PivotItem Header="Dodaj knjigu" Margin="0">
 
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
 
 
@@ -257,10 +265,13 @@
 
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
 
                 <PivotItem Header="Brisanje i ažuriranje knjige" Margin="0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel x:Name="Obrisiknjigu" 
@@ -283,11 +294,14 @@
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
 
 
                 <PivotItem Header="Izvjestaji">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30">
@@ -305,7 +319,8 @@
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
-                </PivotItem>
+                </ScrollViewer>
+            </PivotItem>
 
                 <Pivot.RightHeader>
                     <CommandBar Background="Transparent">
