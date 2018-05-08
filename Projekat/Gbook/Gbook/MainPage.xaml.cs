@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +27,37 @@ namespace Gbook
         public MainPage()
         {
             this.InitializeComponent();
+
+        }
+
+
+        IMobileServiceTable<tabela> userTableObj = App.MobileService.GetTable<tabela>();
+        private void btnSpasi_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+            try
+
+            {
+
+                tabela obj = new tabela(); obj.ime = txtIme.Text; obj.prezime = txtPrezime.Text; obj.indeks = txtIndeks.Text; userTableObj.InsertAsync(obj);
+
+                MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog studenta.");
+                msgDialog.ShowAsync();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageDialog msgDialogError = new MessageDialog("Error : " + ex.ToString());
+
+                msgDialogError.ShowAsync();
+            }
+
         }
     }
 }
+
+
+
+

@@ -14,14 +14,18 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
+
 
 namespace Gbook
 {
-    /// <summary>
+     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
+        public static MobileServiceClient MobileService = new MobileServiceClient("http://TrebevickaZicara.azurewebsites.net");
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,6 +34,7 @@ namespace Gbook
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
         }
 
         /// <summary>
@@ -66,7 +71,7 @@ namespace Gbook
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(proba), e.Arguments);
+                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -96,5 +101,11 @@ namespace Gbook
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+
     }
+    
+    
+
+
 }

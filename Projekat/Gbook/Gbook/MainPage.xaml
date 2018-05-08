@@ -8,6 +8,17 @@
     mc:Ignorable="d" Height="606" Width="650">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light" BorderBrush="#FFD62222">
-       
+        <StackPanel Margin="12">
+            <TextBlock Text="Azure Mobile App - Trebevicka Zicara hakeri" FontSize="22" Margin="12"/>
+
+            <TextBox x:Name="txtIme" PlaceholderText="Ime"/>
+            <TextBox x:Name="txtPrezime" PlaceholderText="Prezime" Margin="0,20, 0, 0"/>
+            <TextBox x:Name="txtIndeks" PlaceholderText="Indeks" Margin="0,20, 0, 0" />
+            <Button x:Name ="btnSpasi" Content="Spasi" Tapped="btnSpasi_Tapped" Margin="0,20,0,0" HorizontalAlignment="Stretch"/>
+            
+
+        </StackPanel>
+        
+        
     </Grid>
 </Page>
