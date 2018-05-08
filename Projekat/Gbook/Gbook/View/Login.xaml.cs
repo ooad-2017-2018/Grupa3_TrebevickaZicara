@@ -26,5 +26,11 @@ namespace Gbook.View
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBoxIme.Text == "admin")
+                Frame.Navigate(typeof(AdminView));
+        }
     }
 }

@@ -15,8 +15,8 @@
               Width="300">
 
             <StackPanel x:Name="LoginPanel">
-                <Grid Background="LightGreen"
-                      RequestedTheme="Light" BorderBrush="#FFD62222">
+                <Grid Background="LightBlue"
+                      RequestedTheme="Light" BorderBrush="#FFD62222" Margin="588,0,-588,0">
                     
                     <TextBlock HorizontalAlignment="Left"
                                Margin="10,20" 
@@ -33,7 +33,7 @@
                                FontWeight="Bold" 
                                FontFamily="Book Antiqua"/>
                     
-                    <TextBox HorizontalAlignment="Left"
+                    <TextBox x:Name="textBoxIme" HorizontalAlignment="Left"
                              Margin="139,20,0,20" 
                              TextWrapping="Wrap" 
                              Text="" 
@@ -49,27 +49,22 @@
                              
                             Background="Green"
                             FontWeight="Bold" 
-                            FontFamily="Book Antiqua"/>
+                            FontFamily="Book Antiqua" Click="Button_Click"/>
                     
-                    <PasswordBox HorizontalAlignment="Left"
+                    <PasswordBox x:Name="textBoxSifra" HorizontalAlignment="Left"
                                  Margin="139,70, 0, 20"
                                  VerticalAlignment="Top" 
                                  Width="154"/>
                     
-                    <Rectangle HorizontalAlignment="Left" 
-                               Height="204" 
-                               Margin="0,0" 
-                               VerticalAlignment="Top"
-                               Width="300" 
-                               Stroke="Black" 
-                               StrokeThickness="4" 
-                               RequestedTheme="Light"/>
+                    
                 </Grid>
 
 
             </StackPanel>
 
         </Grid>
+        <Image HorizontalAlignment="Left" Width ="100" Height="100" Margin="730,692,0,0" VerticalAlignment="Top"
+               Source="ms-appx:///Assets/Capture.PNG"/>
 
 
     </Grid>

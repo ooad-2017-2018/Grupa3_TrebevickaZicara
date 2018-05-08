@@ -9,331 +9,74 @@
 
 
 
-    
-
-        <Grid >
-
-            <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
-                <Pivot.TitleTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="gBook - Bibliotekar" Style="{ThemeResource HeaderTextBlockStyle}"/>
-                        </Grid>
-                    </DataTemplate>
-                </Pivot.TitleTemplate>
-                <PivotItem Header="Dodaj clana" Margin="0">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <!--Form Example-->
-                    <Grid Background="White">
-                        <RelativePanel >
-                            <StackPanel  x:Name="Dodajclana" 
-                                     Margin="20"  
-                                     BorderThickness="1"
-                                     BorderBrush="Black">
-
-                                <TextBox x:Name="Ime" 
-                                     Header= "Ime" 
-                                     Margin="0,10,0,0"
-                                     MaxLength="320" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="PersonalFullName"/>
-
-                                <TextBox x:Name="Prezime" 
-                                     Header="Prezime" 
-                                     Margin="0,10,0,0"
-                                     MaxLength="50" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left"  
-                                     InputScope="PersonalFullName" />
-
-                                <TextBox x:Name="BrojTelefona" 
-                                     Header="Broj telefona" 
-                                     Margin="0,10,0,0" 
-                                     MaxLength="50"
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="TelephoneNumber" />
-
-                                <DatePicker x:Name="Datumrodjenja" 
-                                        Header="Datum rođenja" 
-                                        HorizontalAlignment="Left"
-                                        Margin="0,10,0,0">
-                                </DatePicker>
-
-                                <TextBox x:Name="jmbgZaposlenika" 
-                                     Header="JMBG"  
-                                     Margin="0,10,0,0"
-                                     MaxLength="50" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="AlphanumericFullWidth" />
 
 
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="50 ,200,100,100"
+          Background="white"
+          HorizontalAlignment="Left"
+          VerticalAlignment="Center"
+              Width="300">
 
-                                <TextBox x:Name="Adresa" 
-                                     Header= "Adresa" 
-                                     Margin="0,10,0,0" 
-                                     MaxLength="320" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="Text"/>
+            <StackPanel x:Name="LoginPanel">
+                <Grid Background="LightBlue"
+                      RequestedTheme="Light" BorderBrush="#FFD62222" Margin="588,0,-588,0">
 
+                    <TextBlock HorizontalAlignment="Left"
+                               Margin="10,20" 
+                               Text="Korisničko ime:" 
+                               VerticalAlignment="Top" 
+                               FontWeight="Bold"
+                               FontFamily="Book Antiqua"/>
 
+                    <TextBlock HorizontalAlignment="Left" 
+                               Margin="30,70" 
+                               TextWrapping="Wrap" 
+                               Text="Lozinka:" 
+                               VerticalAlignment="Top" 
+                               FontWeight="Bold" 
+                               FontFamily="Book Antiqua"/>
 
+                    <TextBox x:Name="textBoxIme" HorizontalAlignment="Left"
+                             Margin="139,20,0,20" 
+                             TextWrapping="Wrap" 
+                             Text="" 
+                             VerticalAlignment="Top" 
+                             RenderTransformOrigin="0.239,-0.219" 
+                             Height="17" Width="155"/>
 
-
-
-
-                            </StackPanel>
-
-
-                            <StackPanel x:Name="slikaZaposlenika" Margin="30" RelativePanel.RightOf="Dodajclana">
-                                <DatePicker x:Name="Datumuclanjenja" 
-                                        Header="Datum učlanjenja" 
-                                        HorizontalAlignment="Left"
-                                        Margin="0,10,0,0">
-                                </DatePicker>
-
-
-
-                                <RelativePanel>
-                                    <Button  Name="DodajSlikuButton"  Content="Dodaj sliku" Margin="30,50,20,10" Width="100"  Background="Green" FontSize="11"></Button>
-                                    <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti" Margin="30,50,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
-                                    <Image Source ="../image/flow.jpg" Margin="90,130" Width="150" Height="150"/>
-                                </RelativePanel>
-                            </StackPanel>
-
-                            <StackPanel  Margin="30,10,30,30"  RelativePanel.RightOf="Dodajclana" RelativePanel.Below="slikaZaposlenika">
-                                <RelativePanel Margin="30,-160,10,10">
-                                    <Button Name="Dodaj" Content="Dodaj člana" Margin="30,10,0,10"  Width="100"  Background="Green" FontSize="11" Height="38"></Button>
-                                    <Button  Name="Ponisti" RelativePanel.RightOf="Dodaj"  Content="Ponisti" Margin="10,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
-                                </RelativePanel>
-                            </StackPanel>
-
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
-
-
-
-                <PivotItem Header="Brisanje i ažuriranje člana" Margin="0">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-
-                    <Grid Background="White">
-                        <RelativePanel>
-                            <StackPanel x:Name="Obrisiclana" 
-                                    Margin="20,5,0,0"
-                                    BorderThickness="1" 
-                                    BorderBrush="Black">
-
-                                <TextBox x:Name="ImeObrisanog" 
-                                     Header= "Ime" 
-                                     Margin="0,5,0,0" 
-                                     MaxLength="320"
-                                     Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                                <TextBox x:Name="PrezimeObrisanog" Header="Prezime" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
-                                <RelativePanel>
-                                    <Button Name="ObrisiButton"  Content="Obriši" Width="100" Margin="150,10,10,10" Background="Red" Height ="40"></Button>
-                                    <Button Name="Azuriraj"  Content="Ažuriraj" Width="100" Margin="10,10,10,10" Background="Yellow" Height ="40"></Button>
-                                    <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
-                                </RelativePanel>
-                            </StackPanel>
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
-
-
-
-
-                <PivotItem Header="Iskaznica">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-
-                    <Grid Background="White">
-                        <RelativePanel>
-                            <StackPanel Name="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
-                                <TextBox x:Name="Zaposlenik" Header= "Ime i prezime:" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                                <TextBox x:Name="Funkcija" Header= "Datum isteka:" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                            </StackPanel>
-
-                            <StackPanel RelativePanel.RightOf="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
-                                <Image Source="..\image\img.png" Width="150" Height="109" />
-                                <TextBlock HorizontalAlignment="Center">slika</TextBlock>
-                            </StackPanel>
-
-                            <StackPanel RelativePanel.Below="IskaznicaLice">
-                                <RelativePanel>
-                                    <Button Name="iskaznicaDodaj"  Content="Dodaj iskaznicu" Width="200" Margin="20,10,10,10" Background="Green" Height="40"></Button>
-                                    <Button Name="iskaznicaPonisti"  Content="Poništi" RelativePanel.RightOf="iskaznicaDodaj" Width="100" Margin="80,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
-                                </RelativePanel>
-                            </StackPanel>
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
-
-                <PivotItem Header="Dodaj knjigu" Margin="0">
-
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-
-
-
-                    <Grid Background="White">
-                        <RelativePanel >
-
-                            <StackPanel  x:Name="Dodajknjigu" 
-                                     Margin="20"  
-                                     BorderThickness="1"
-                                     BorderBrush="Black">
-
-                                <TextBox x:Name="Naziv" 
-                                     Header= "Naziv" 
-                                     Margin="0,10,0,0"
-                                     MaxLength="320" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="PersonalFullName"/>
-
-                                <TextBox x:Name="Autor" 
-                                     Header="Autor" 
-                                     Margin="0,10,0,0"
-                                     MaxLength="50" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left"  
-                                     InputScope="PersonalFullName" />
-
-                                <TextBox x:Name="isbn" 
-                                     Header="ISBN" 
-                                     Margin="0,10,0,0" 
-                                     MaxLength="50"
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="TelephoneNumber" />
-
-                                <TextBox x:Name="godina_izdanja" 
-                                     Header="Godina izdanja" 
-                                     Margin="0,10,0,0" 
-                                     MaxLength="50"
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="TelephoneNumber" />
-
-
-
-                                <TextBox x:Name="Broj_kopija" 
-                                     Header="Broj kopija"  
-                                     Margin="0,10,0,0"
-                                     MaxLength="50" 
-                                     Width="400" 
-                                     HorizontalAlignment="Left" 
-                                     InputScope="AlphanumericFullWidth" />
-
-
-
-
-                                <Button Name="Spasi_knjigu" 
-                            Content="Spasi" 
-                            Width="100"
-                            Margin="180,10,10,10"
+                    <Button Content="Prijava" 
+                            HorizontalAlignment="Left" 
+                            Margin="120,140,0,0" 
+                            VerticalAlignment="Top"
+                            Width="91"  
+                             
                             Background="Green"
-                            Height ="40"></Button>
+                            FontWeight="Bold" 
+                            FontFamily="Book Antiqua" Click="Button_Click"/>
 
-                                <Button Name="Ponisti_k" 
-                              Content="Ponisti" 
-                              RelativePanel.RightOf="Spasi_knjigu"
-                              Width="100" Margin="50,-50,10, 10"
-                              Background="Red"
-                             Height ="40"></Button>
+                    <PasswordBox x:Name="textBoxSifra" HorizontalAlignment="Left"
+                                 Margin="139,70, 0, 20"
+                                 VerticalAlignment="Top" 
+                                 Width="154"/>
 
-
-
-
-
-
-
-
-                            </StackPanel>
-                            <StackPanel x:Name="slikak" Margin="50, 20" RelativePanel.RightOf="Dodajknjigu">
-                                <Image Source ="../image/flow.jpg" Width="300"/>
-                                <RelativePanel>
-                                    <Button  Name="DodajSlikuk"  Content="Dodaj sliku" Margin="10,10,20,10" Width="80"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
-                                    <Image Source="..\image\img.png" Width="150" Margin="-25, 70 " Height="109" />
-                                </RelativePanel>
-                            </StackPanel>
-
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
+                    <Rectangle HorizontalAlignment="Left" 
+                               Height="204" 
+                               Margin="0,0" 
+                               VerticalAlignment="Top"
+                               Width="300" 
+                               Stroke="Black" 
+                               StrokeThickness="4" 
+                               RequestedTheme="Light"/>
+                </Grid>
 
 
-                <PivotItem Header="Brisanje i ažuriranje knjige" Margin="0">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            </StackPanel>
 
-                    <Grid Background="White">
-                        <RelativePanel>
-                            <StackPanel x:Name="Obrisiknjigu" 
-                                    Margin="20,5,0,0"
-                                    BorderThickness="1" 
-                                    BorderBrush="Black">
-
-                                <TextBox x:Name="Naslov_k" 
-                                     Header= "Naslov" 
-                                     Margin="0,5,0,0" 
-                                     MaxLength="320"
-                                     Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                                <TextBox x:Name="isbn_b" Header="ISBN" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
-                                <RelativePanel>
-                                    <Button Name="Obrisik"  Content="Obrisi knjigu" Width="120" Background="Red" Margin="150,10,10,10"  Height ="40"></Button>
-                                    <Button Name="Azurirajk"  Content="Ažuriraj" Width="100" Margin="10,10,10,10" Background="Yellow" Height ="40"></Button>
-
-                                    <Button Name="Ponistik" Content="Ponisti"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" RelativePanel.RightOf="Obrisik" Width="100" Margin="30,10,5,5"  Height ="40"></Button>
-                                </RelativePanel>
-                            </StackPanel>
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
-
-
-
-                <PivotItem Header="Izvjestaji">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-
-                    <Grid Background="White">
-                        <RelativePanel>
-                            <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30">
-                                <RadioButton Content="Zaposlenici" Tag="Zaposlenici" />
-                                <RadioButton Content="Clanovi" Tag="Clanovi" />
-                                <RadioButton Content="Knjige" Tag="Knjige" />
-                            </StackPanel>
-
-                            <StackPanel RelativePanel.RightOf="RadioButtonsi" Margin="10" BorderThickness="2" BorderBrush="Black">
-                                <Image Width="300" Height="150" Source="../image/images.png"></Image>
-                            </StackPanel >
-
-                            <StackPanel RelativePanel.Below="RadioButtonsi">
-                                <Button Name="Pretrazi"  Content="Pretrazi" Margin="300,10,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
-                            </StackPanel>
-                        </RelativePanel>
-                    </Grid>
-                </ScrollViewer>
-            </PivotItem>
-
-                <Pivot.RightHeader>
-                    <CommandBar Background="Transparent">
-                        <AppBarButton Icon="Add"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="Edit" />
-                        <AppBarButton Icon="Delete"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="Save"/>
-                    </CommandBar>
-                </Pivot.RightHeader>
-            </Pivot>
         </Grid>
-    </Page>
+        <Image HorizontalAlignment="Left" Width ="100" Height="100" Margin="730,692,0,0" VerticalAlignment="Top"
+               Source="ms-appx:///Assets/Capture.PNG"/>
 
 
+    </Grid>
+</Page>

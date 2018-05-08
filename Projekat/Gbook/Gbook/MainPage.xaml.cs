@@ -30,7 +30,11 @@ namespace Gbook
 
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+              
+        }
         IMobileServiceTable<tabela> userTableObj = App.MobileService.GetTable<tabela>();
         private void btnSpasi_Tapped(object sender, TappedRoutedEventArgs e)
         {
