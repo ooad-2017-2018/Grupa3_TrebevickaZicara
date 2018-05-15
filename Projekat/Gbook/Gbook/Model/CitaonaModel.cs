@@ -17,5 +17,19 @@ namespace Gbook.Model
             this.zauzeto = zauzeto;
            
         }
+        public string DajTipCitaone() { return tipCitaone; }
+        public void OznaciZauzeto()
+        {
+            zauzeto = true;
+        }
+        public void OznaciSlobodno()
+        {
+            zauzeto = false;
+        }
+        public bool DaLiJeSlobodna()
+        {
+            return zauzeto;
+        }
+
     }
 }
