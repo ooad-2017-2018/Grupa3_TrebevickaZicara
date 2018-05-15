@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\AdminModel.cs" />
     <Compile Include="Model\BibliotekaModel.cs" />
     <Compile Include="Model\BibliotekarModel.cs" />
     <Compile Include="Model\CitaonaModel.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Model\KnjigaModel.cs" />
     <Compile Include="Model\OsobaINFOModel.cs" />
     <Compile Include="Model\PortirModel.cs" />
+    <Compile Include="Model\PrijavaModel.cs" />
     <Compile Include="Model\ZaposlenikModel.cs" />
     <Compile Include="proba.xaml.cs">
       <DependentUpon>proba.xaml</DependentUpon>

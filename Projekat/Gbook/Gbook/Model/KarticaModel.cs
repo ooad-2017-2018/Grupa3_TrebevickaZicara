@@ -10,17 +10,42 @@ using System.Threading.Tasks;
 
 namespace Gbook.Model
 {
-    class KarticaModel
-    {
-        private OsobaINFOModel info;
-        private DateTime vaziDo;
-        private long idKartice;
-
-        public KarticaModel(OsobaINFOModel info, DateTime vaziDo, long idKartice)
+        class KarticaModel
         {
-            this.info = info;
-            this.vaziDo = vaziDo;
-            this.idKartice = idKartice;
-        }
+            private DateTime vaziDo;
+            private long idKartice;
+            private ClanModel korisnik;
+            private BibliotekarModel bibliotekar;
+
+
+
+            public DateTime VaziDo { get => vaziDo; set => vaziDo = value; }
+            public long IdKartice { get => idKartice; set => idKartice = value; }
+            internal ClanModel Korisnik { get => korisnik; set => korisnik = value; }
+
+            public KarticaModel(DateTime vaziDo, long idKartice, ClanModel clan, BibliotekarModel bibliotekar)
+            {
+                this.VaziDo = vaziDo;
+                this.IdKartice = idKartice;
+                this.Korisnik = clan;
+                this.bibliotekar = bibliotekar;
+            }
+            public DateTime DatumVazenjaKartice()
+            {
+                return vaziDo;
+            }
+
+            public ClanModel DajKorisnikaKartice()
+            {
+                return Korisnik;
+            }
+
+            public BibliotekarModel DajBibliotekaraKojiJeIzdaoKarticu()
+            {
+                return bibliotekar;
+            }
+        
+    
     }
+
 }
