@@ -31,6 +31,7 @@ namespace Gbook.View
         public AdminView()
         {
             this.InitializeComponent();
+         
         }
 
 
@@ -40,6 +41,7 @@ namespace Gbook.View
         {
 
             Frame.Navigate(typeof(Login));
+
 
 
         }
@@ -83,10 +85,19 @@ namespace Gbook.View
             Prezime.Text = Adresa.Text =Grad.Text= Email.Text = brojLicneKarte.Text =BrojTelefona.Text=jmbgZaposlenika.Text= "";
             DatumRodjenja.Date = DatumZaposlenja.Date= DateTime.Now;
             rb_admin.IsChecked = rb_bibliotekar.IsChecked = rb_portir.IsChecked = false;
+            //polje_za_sliku.Source =new ImageSource(); 
         }
 
         private async void Dodaj_Click(object sender, RoutedEventArgs e)
         {
+            tekst_pretrage.Text = ""; //ovo za pretrage, ...dok skontam nesta
+            tekst.Text = "";
+            trazilica.Text = "";
+            rb_zaposlenici.IsChecked = rb_knjige.IsChecked = rb_clanovi.IsChecked = false;
+
+
+
+
             if (Ime.Text == "" || Prezime.Text == "" || BrojTelefona.Text == "" || jmbgZaposlenika.Text == "")
             {
                 var messageDialog = new MessageDialog("Neispravni podaci!");
@@ -127,10 +138,34 @@ namespace Gbook.View
           
         }
 
+        private void btn_Pretrazi_Click(object sender, RoutedEventArgs e)
+        {
+
+            tekst_pretrage.Text = "";
+            tekst.Text = "";
+            trazilica.Text = "";
+
+            if (rb_zaposlenici.IsChecked == true)
+            {
+                tekst.Text = "Zaposlenici sa najvećim platama:\n1. Meho Mehić\n2. Fata Fatić\n3. Habiba Habi";
+            }
+            else if (rb_knjige.IsChecked == true)
+            {
+                tekst.Text = "Najčitanije knjige mjeseca maja:\n1. Tvrđava - Meša Selimović\n2. Ježeva kućica\n3. Čekajući Godoa";
+            }
+            else if (rb_clanovi.IsChecked == true)
+            {
+                tekst.Text = "Najaktivniji članovi:\n1. Damir Damirovic\n2. Selma Selmic\n3. Emir Emirovic";
+            }
+            else tekst.Text = "";
+
+            
+        }
+
         /*
          Nema potrebe nikako za onim tabom kartica, napravit ćemo da se automatski kreiraju kartice
          kad se unese zaposlenik, a ne onako dupli unos, nema smisla
-
+         */
         public void AnulirajBrisanjeTab()
         {
             ImeObrisanog.Text = PrezimeObrisanog.Text = JMBGObrisanog.Text = "";
@@ -138,6 +173,12 @@ namespace Gbook.View
 
         private async void ObrisiButton_Click(object sender, RoutedEventArgs e)
         {
+            tekst_pretrage.Text = "";
+            trazilica.Text = "";
+            tekst.Text = "";
+            rb_zaposlenici.IsChecked = rb_knjige.IsChecked = rb_clanovi.IsChecked = false;
+
+
             bool testna = false;
 
             foreach (ZaposlenikModel i in BibliotekaModel.Zaposlenici)
@@ -149,6 +190,7 @@ namespace Gbook.View
                     await messageDialog1.ShowAsync();
                     testna = true;
                     AnulirajBrisanjeTab();
+                    break;
                 }
 
             }
@@ -156,6 +198,7 @@ namespace Gbook.View
             {
                 var messageDialog1 = new MessageDialog("Unijeli ste neispravne podatke!");
                 await messageDialog1.ShowAsync();
+                AnulirajBrisanjeTab();
             }
         }
 
@@ -164,55 +207,76 @@ namespace Gbook.View
             AnulirajBrisanjeTab();
         }
 
+        
         private void Ponisti_Click(object sender, RoutedEventArgs e)
         {
             AnulirajStanje();
         }
 
-        private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
+        private void Trazi_Click(object sender, RoutedEventArgs e)
         {
+            tekst_pretrage.Text = "";
+            tekst.Text = "";
+            rb_zaposlenici.IsChecked = rb_knjige.IsChecked = rb_clanovi.IsChecked = false;
 
-            FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
-            izbornikFajlaSlike.SuggestedStartLocation =
 
-                PickerLocationId.PicturesLibrary;
-            izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
-            izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
-            izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
-            izbornikFajlaSlike.FileTypeFilter.Add(".png");
-
-            StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
-            if (fajlSlike != null)
-
+            string trazimo = trazilica.Text;
+            foreach(ZaposlenikModel i in BibliotekaModel.Zaposlenici)
             {
-
-                using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
-
+                if (i.info.Ime == trazimo || i.info.Prezime == trazimo)
                 {
-
-                    BitmapImage slika = new BitmapImage();
-                    slika.SetSource(tokFajla);
-                    slikaIskaznica.Source = slika;
-
+                    tekst_pretrage.Text += i.info.to_String();
+                    tekst_pretrage.Text += "\n";
                 }
             }
-
+            AnulirajBrisanjeTab();
+            AnulirajStanje();
         }
+        /*
+private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
+{
 
-       
-        private void iskaznicaDodaj_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-              ///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
+   FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
+   izbornikFajlaSlike.SuggestedStartLocation =
+
+       PickerLocationId.PicturesLibrary;
+   izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
+   izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
+   izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
+   izbornikFajlaSlike.FileTypeFilter.Add(".png");
+
+   StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
+   if (fajlSlike != null)
+
+   {
+
+       using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+
+       {
+
+           BitmapImage slika = new BitmapImage();
+           slika.SetSource(tokFajla);
+           slikaIskaznica.Source = slika;
+
+       }
+   }
+
+}
 
 
-            }
-            catch 
-            {
+private void iskaznicaDodaj_Click(object sender, RoutedEventArgs e)
+{
+   try
+   {
+     ///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
 
-            }
-        }
-        */
+
+   }
+   catch 
+   {
+
+   }
+}
+*/
     }
 }

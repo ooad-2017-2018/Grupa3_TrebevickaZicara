@@ -88,6 +88,10 @@ namespace Gbook.Model
         public long Jmbg { get => jmbg; set => jmbg = value; }
 
 
+        public string to_String()
+        {
+            return "Ime: " + ime + "\nPrezime: " + Prezime + "\nJMBG: " + Jmbg + "\nGrad: " + grad + "\nBroj telefona: " + brojTel + "\n";
+        }
         /* public class OsobaINFOModel
          {
              private string ime;

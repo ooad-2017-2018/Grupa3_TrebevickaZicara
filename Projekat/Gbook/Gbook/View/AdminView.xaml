@@ -17,7 +17,7 @@
                         </Grid>
                     </DataTemplate>
                 </Pivot.TitleTemplate>
-                <PivotItem Header="Dodaj zaposlenika" Margin="0">
+                <PivotItem Header="Dodaj zaposlenika" Margin="0" >
 
                     <!--Form Example-->
                     <Grid Background="White">
@@ -117,25 +117,46 @@
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30">
-                                <RadioButton Content="Zaposlenici" Tag="Zaposlenici" />
-                                <RadioButton Content="Clanovi" Tag="Clanovi" />
-                                <RadioButton Content="Knjige" Tag="Knjige" />
-                            </StackPanel>
+                                <RadioButton x:Name="rb_zaposlenici" Content="Zaposlenici" Tag="Zaposlenici" />
+                                <RadioButton x:Name="rb_clanovi"  Content="Clanovi" Tag="Clanovi" />
+                                <RadioButton x:Name="rb_knjige" Content="Knjige" Tag="Knjige" />
+                          </StackPanel>
 
                             <StackPanel RelativePanel.RightOf="RadioButtonsi" Margin="10" BorderThickness="2" BorderBrush="Black">
+                            <RichTextBlock x:Name="ispis_izvjestaja" Width="300" Height="300"></RichTextBlock>
+                            <TextBlock x:Name="tekst" Text="" Margin="10, -280"></TextBlock>
+
+                            <!--
                                 <Image Width="300" Height="150" Source="../image/images.png"></Image>
-                            </StackPanel >
+                          -->
+                                </StackPanel >
 
                             <StackPanel RelativePanel.Below="RadioButtonsi">
-                                <Button Name="Pretrazi"  Content="Pretrazi" Margin="180,10,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
+                                <Button Name="btn_Pretrazi"  Content="Pretrazi" Margin="30,10,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38" Click="btn_Pretrazi_Click"></Button>
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
 
                 </PivotItem>
 
-                
-                
+            <PivotItem Header="Pretraga">
+                <Grid Background="White">
+                    <RelativePanel>
+                        <TextBlock x:Name="labela" Text="Unesite ime ili prezime zaposlenika:" Margin="10, 20"></TextBlock>
+                        <TextBox x:Name="trazilica" Width="200" Margin="10, 60"></TextBox>
+                        <Button x:Name="Trazi" Content="Trazi" Margin="90, 110" Click="Trazi_Click"></Button>
+                        <RichTextBlock x:Name="ispis_pretrage" Margin="250, 20" Width="300" Height="300"></RichTextBlock>
+                        <TextBlock x:Name="tekst_pretrage" Text="" Margin="260, 30"></TextBlock>
+
+
+                    </RelativePanel> 
+                </Grid>
+                   
+
+            </PivotItem>
+
+
+
                 <Pivot.RightHeader>
                     <CommandBar Background="Transparent">
                         <AppBarButton Icon="Add"/>
@@ -148,6 +169,7 @@
                 </CommandBar>
                 </Pivot.RightHeader>
             </Pivot>
+        
         </Grid>
     </Page>
 

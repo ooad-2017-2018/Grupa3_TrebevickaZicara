@@ -81,9 +81,9 @@ namespace Gbook.Model
 
             }
 
-            public void DodajKarticu(DateTime vaziDo, long idKartice, ClanModel clan)
+            public void DodajKarticu(DateTime vaziDo,  ClanModel clan)
             {
-                BibliotekaModel.DodajKarticu(new KarticaModel(vaziDo, idKartice, clan, this));
+                BibliotekaModel.DodajKarticu(new KarticaModel(vaziDo, clan));
 
             }
 
