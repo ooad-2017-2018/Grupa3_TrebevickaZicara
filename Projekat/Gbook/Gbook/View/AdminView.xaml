@@ -9,7 +9,7 @@
 
     <Grid >
 
-            <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
+            <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Margin="0,-1,0,1" >
                 <Pivot.TitleTemplate>
                     <DataTemplate>
                         <Grid>
@@ -109,8 +109,11 @@
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
+
                 </PivotItem>
 
+                
+                
                 <Pivot.RightHeader>
                     <CommandBar Background="Transparent">
                         <AppBarButton Icon="Add"/>
@@ -119,7 +122,8 @@
                         <AppBarButton Icon="Delete"/>
                         <AppBarSeparator/>
                         <AppBarButton Icon="Save"/>
-                    </CommandBar>
+                    <AppBarButton x:Name="Odjava" Icon="Back" Label="Odjava"  Click="Odjava_Click"/>
+                </CommandBar>
                 </Pivot.RightHeader>
             </Pivot>
         </Grid>

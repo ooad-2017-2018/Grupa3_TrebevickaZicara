@@ -17,9 +17,9 @@ namespace Gbook.Model
                 this.pw = pw;
             }
 
-            public void DodajZaposlenika(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, DateTime datumZaposlenja, double plata)
+            public void DodajZaposlenika(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifra, DateTime datumZaposlenja, double plata, string tip)
             {
-                BibliotekaModel.DodajZaposlenika(new ZaposlenikModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, datumZaposlenja, plata));
+                BibliotekaModel.DodajZaposlenika(new ZaposlenikModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra, datumZaposlenja, plata, tip));
             }
             public ZaposlenikModel DajZaposlenika(string ime, string prezime)
             {

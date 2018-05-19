@@ -1,7 +1,4 @@
-﻿/*
- * created by:Mirela Dedic
- * created on: 26.04.2018
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +10,7 @@ namespace Gbook.Model
         class PortirModel : ZaposlenikModel
         {
 
-            public PortirModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, DateTime datumZaposlenja, double plata) : base(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, datumZaposlenja, plata)
+            public PortirModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifra, DateTime datumZaposlenja, double plata, string tip) : base(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra, datumZaposlenja, plata, tip)
             { }
 
 

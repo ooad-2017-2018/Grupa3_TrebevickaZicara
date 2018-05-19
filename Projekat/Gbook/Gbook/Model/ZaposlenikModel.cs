@@ -8,24 +8,36 @@ namespace Gbook.Model
 {
         class ZaposlenikModel
         {
-            private OsobaINFOModel info;
+            public OsobaINFOModel info;
             private DateTime datumZaposlenja;
             private double plata;
+            private string tip_radnika; //portir, admin ili bibliotekar
 
-            public ZaposlenikModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, DateTime datumZaposlenja, double plata)
+        public ZaposlenikModel()
+        {
+
+        }
+
+            public ZaposlenikModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email,string sifra,  DateTime datumZaposlenja, double plata, string tip)
             {
 
-                info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email);
+                info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra);
                 DatumZaposlenja = datumZaposlenja;
                 Plata = plata;
+            Tip_radnika = tip;
 
             }
 
             public DateTime DatumZaposlenja { get => datumZaposlenja; set => datumZaposlenja = value; }
             public double Plata { get => plata; set => plata = value; }
-            public string DajImeZap() { return info.Ime; }
+        public string Tip_radnika { get => tip_radnika; set => tip_radnika = value; }
+
+        /*
+        public string DajImeZap() { return info.Ime; }
             public string DajPrezimeZap() { return info.Prezime; }
-            public Tuple<string, string> DajZaposlenika()
+
+        */
+        public Tuple<string, string> DajZaposlenika()
             {
                 return new Tuple<string, string>(info.Ime, info.Prezime);
             }

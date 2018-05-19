@@ -1,7 +1,4 @@
-﻿/*
- * created by:Mirela Dedic
- * created on: 26.04.2018
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +17,10 @@ namespace Gbook.Model
             private string adresa;
             private long brojTel;
             private string email;
+        private string sifra;
 
 
-            public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email)
+            public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifraa)
             {
                 this.Ime = ime;
                 this.Prezime = prezime;
@@ -32,12 +30,15 @@ namespace Gbook.Model
                 this.adresa = adresa;
                 this.brojTel = brojTel;
                 this.email = email;
+            this.sifra = sifraa;
 
             }
-            public OsobaINFOModel(string ime, string prezime)
+            public OsobaINFOModel(string ime, string prezime, string sifra)
             {
                 this.Ime = ime;
                 this.Prezime = prezime;
+            Sifra = sifra;
+
             }
             public string Ime
             {
@@ -49,7 +50,7 @@ namespace Gbook.Model
                 {
                     if (value.Length > 20)
                         throw new Exception("Greska: Ime nije validno");
-                    else prezime = value;
+                    else ime = value;
                 }
             }
             public string Prezime
@@ -78,53 +79,55 @@ namespace Gbook.Model
                     return datumRodjenja;
                 }
             }
-    
 
-    /* public class OsobaINFOModel
-     {
-         private string ime;
-         private string email;
-         private string prezime;
-         private long jmbg;
-         private DateTime datumRodjenja;
-         private string grad;
-         private string adresa;
-         private long brojTel;
+        public string Sifra { get => sifra; set => sifra = value; }
 
-         public string Ime { get => ime; set => ime = value; }
-         public string Email { get => email; set => email = value; }
-         public string Prezime { get => prezime; set => prezime = value; }
-         public long Jmbg { get => jmbg; set => jmbg = value; }
-         public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
-         public string Grad { get => grad; set => grad = value; }
-         public string Adresa { get => adresa; set => adresa = value; }
-         public long BrojTel { get => brojTel; set => brojTel = value; }
 
-         public OsobaINFOModel(string ime, string emaill,  string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel)
+        /* public class OsobaINFOModel
          {
-             this.Ime = ime;
-             this.Prezime = prezime;
-             this.Jmbg = jmbg;
-             this.DatumRodjenja = datumRodjenja;
-             this.Grad = grad;
-             this.Adresa = adresa;
-             this.BrojTel = brojTel;
-             this.Email = emaill;
+             private string ime;
+             private string email;
+             private string prezime;
+             private long jmbg;
+             private DateTime datumRodjenja;
+             private string grad;
+             private string adresa;
+             private long brojTel;
 
-         }
+             public string Ime { get => ime; set => ime = value; }
+             public string Email { get => email; set => email = value; }
+             public string Prezime { get => prezime; set => prezime = value; }
+             public long Jmbg { get => jmbg; set => jmbg = value; }
+             public DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
+             public string Grad { get => grad; set => grad = value; }
+             public string Adresa { get => adresa; set => adresa = value; }
+             public long BrojTel { get => brojTel; set => brojTel = value; }
 
-         public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja,  string adresa, long brojTel)
-         {
-             this.Ime = ime;
-             this.Prezime = prezime;
-             this.Jmbg = jmbg;
-             this.DatumRodjenja = datumRodjenja;
+             public OsobaINFOModel(string ime, string emaill,  string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel)
+             {
+                 this.Ime = ime;
+                 this.Prezime = prezime;
+                 this.Jmbg = jmbg;
+                 this.DatumRodjenja = datumRodjenja;
+                 this.Grad = grad;
+                 this.Adresa = adresa;
+                 this.BrojTel = brojTel;
+                 this.Email = emaill;
 
-             this.Adresa = adresa;
-             this.BrojTel = brojTel;
+             }
+
+             public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja,  string adresa, long brojTel)
+             {
+                 this.Ime = ime;
+                 this.Prezime = prezime;
+                 this.Jmbg = jmbg;
+                 this.DatumRodjenja = datumRodjenja;
+
+                 this.Adresa = adresa;
+                 this.BrojTel = brojTel;
 
 
-         }
- */
-}
+             }
+     */
+    }
 }

@@ -67,6 +67,9 @@
                     <AppBarButton Icon="Delete"/>
                     <AppBarSeparator/>
                     <AppBarButton Icon="Save"/>
+                   
+                     <AppBarButton x:Name="Odjava" Icon="Back" Label="Odjava"  Click="Odjava_Click"/>
+                       
                 </CommandBar>
             </Pivot.RightHeader>
         </Pivot>

@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Gbook.Model;
+using Gbook.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,12 +27,39 @@ namespace Gbook.View
         public Login()
         {
             this.InitializeComponent();
+            BibliotekaModel.NapuniInfo();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxIme.Text == "admin")
+            string ime = textBoxIme.Text;
+            string sifra = passwordBoxSifra.Password;
+
+            //ako je admin
+            foreach(ZaposlenikModel i in BibliotekaModel.Zaposlenici)
+            if (i.info.Ime == ime &&  i.info.Sifra==sifra && i.Tip_radnika=="admin")
                 Frame.Navigate(typeof(AdminView));
+
+            //ako je bibliotekar
+            foreach (ZaposlenikModel i in BibliotekaModel.Zaposlenici)
+                if (i.info.Ime == ime && i.info.Sifra == sifra && i.Tip_radnika == "bibliotekar")
+                    Frame.Navigate(typeof(Bibliotekar));
+
+            //ako je portir
+            foreach (ZaposlenikModel i in BibliotekaModel.Zaposlenici)
+                if (i.info.Ime == ime && i.info.Sifra == sifra && i.Tip_radnika == "portir")
+                    Frame.Navigate(typeof(Portir));
+
+            //ako je clan
+            foreach (ClanModel i in BibliotekaModel.Clanovi)
+                if (i.info.Ime == ime && i.info.Sifra == sifra )
+                    Frame.Navigate(typeof(Clan));
+
+           
+
+
+
         }
     }
 }

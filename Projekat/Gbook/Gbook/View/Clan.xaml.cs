@@ -26,5 +26,14 @@ namespace Gbook.View
         {
             this.InitializeComponent();
         }
+
+
+        private void Odjava_Click(object sender, RoutedEventArgs e)
+        {
+
+            Frame.Navigate(typeof(Login));
+
+
+        }
     }
 }

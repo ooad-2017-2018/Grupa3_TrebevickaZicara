@@ -1,7 +1,4 @@
-﻿/*
- * created by:Mirela Dedic
- * created on: 26.04.2018
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +9,17 @@ namespace Gbook.Model
 {
     class ClanModel
         {
-            private OsobaINFOModel info;
+            public OsobaINFOModel info;
             private string kategorija;
             private DateTime datumUclanjenja;
             private KarticaModel kartica;
             private List<KnjigaModel> knjige;
             private BibliotekarModel mojBibliotekar;
+
+        public ClanModel()
+        {
+
+        }
 
             public ClanModel(OsobaINFOModel info, string kategorija, DateTime datumUclanjenja, KarticaModel kartica, BibliotekarModel bibliotekar)
             {

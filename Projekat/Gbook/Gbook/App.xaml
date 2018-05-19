@@ -1,8 +1,16 @@
 ﻿<Application
-    x:Class="Gbook.App"
+    
+    x:Class="Gbook.App" 
+    
+    
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Gbook"
+     xmlns:local="using:Gbook"
     RequestedTheme="Light">
 
 </Application>
+<!-- 
+    x:Class="XAMLResources.Gbook.App"
+    xmlns:local="using:XAMLResources.Gbook"
+    xmlns:local="using:Gbook"
+    -->

@@ -1,7 +1,4 @@
-﻿/*
- * created by:Mirela Dedic
- * created on: 26.04.2018
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;

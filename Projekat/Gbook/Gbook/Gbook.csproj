@@ -109,12 +109,13 @@
     <Compile Include="Model\PortirModel.cs" />
     <Compile Include="Model\PrijavaModel.cs" />
     <Compile Include="Model\ZaposlenikModel.cs" />
-    <Compile Include="proba.xaml.cs">
-      <DependentUpon>proba.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tabela.cs" />
     <Compile Include="ViewModel\AdminDodajViewModel.cs" />
+    <Compile Include="ViewModel\BibliotekarViewModel.cs" />
+    <Compile Include="ViewModel\ClanViewModel.cs" />
+    <Compile Include="ViewModel\LogInViewModel.cs" />
+    <Compile Include="ViewModel\PortirViewModel.cs" />
     <Compile Include="View\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
     </Compile>
@@ -173,10 +174,6 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="proba.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AdminView.xaml">
       <SubType>Designer</SubType>

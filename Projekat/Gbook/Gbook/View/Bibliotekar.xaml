@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid >
+ 
+        <Grid >
 
         <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
             <Pivot.TitleTemplate>
@@ -318,18 +319,18 @@
                 </ScrollViewer>
             </PivotItem>
 
-            <Pivot.RightHeader>
-                <CommandBar Background="Transparent">
-                    <AppBarButton Icon="Add"/>
-                    <AppBarSeparator/>
-                    <AppBarButton Icon="Edit" />
-                    <AppBarButton Icon="Delete"/>
-                    <AppBarSeparator/>
-                    <AppBarButton Icon="Save"/>
-                </CommandBar>
-            </Pivot.RightHeader>
+            
+            <Pivot.RightHeader> 
+            <CommandBar Background="Transparent">
+                
+                <AppBarButton x:Name="Odjava" Icon="Back" Label="Odjava"  Click="Odjava_Click"/>
+            </CommandBar>
+             </Pivot.RightHeader> 
         </Pivot>
     </Grid>
+    
+       
+   
 </Page>
 
 

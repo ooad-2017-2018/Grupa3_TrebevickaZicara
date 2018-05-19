@@ -1,7 +1,4 @@
-﻿/*
- * created by:Mirela Dedic
- * created on: 26.04.2018
- */
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +9,10 @@ namespace Gbook.Model
 {
     class BibliotekarModel : ZaposlenikModel
     {
+ public BibliotekarModel()
+        {
 
+        }
       //MEDINA -> ovo nije uvezano sa Bibliotekom,kada dodas clana ili bilo sta,nece se azurirati lista clanova u Biblioteci  
         /*
       
@@ -68,13 +68,15 @@ namespace Gbook.Model
                 }
         }
         */
-            public BibliotekarModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, DateTime datumZaposlenja, double plata) : base(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, datumZaposlenja, plata)
+            public BibliotekarModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifra, DateTime datumZaposlenja, double plata, string tip) 
+            : base(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra, datumZaposlenja, plata, tip)
             {
 
             }
-            public void DodajClana(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string kategorija, DateTime datumUclanjenja)
+
+            public void DodajClana(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email,string sifra, string kategorija, DateTime datumUclanjenja)
             {
-                OsobaINFOModel info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email);
+                OsobaINFOModel info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra);
                 BibliotekaModel.DodajClana(new ClanModel(info, kategorija, datumUclanjenja, null, this));
 
             }
@@ -84,6 +86,7 @@ namespace Gbook.Model
                 BibliotekaModel.DodajKarticu(new KarticaModel(vaziDo, idKartice, clan, this));
 
             }
+
             //..Ako Bibliotekar DodajeKnjigu
             public void DodajKnjigu(string naziv, string autor, string izdavac, long isbn, DateTime godinaIzdanja, int naStanju, bool zaduzena)
             {
@@ -94,6 +97,7 @@ namespace Gbook.Model
             {
                 BibliotekaModel.ObrisiClana(clan.Info.Ime, clan.Info.Prezime);
             }
+
             public bool IznajmiKnjigu(KnjigaModel knj)
             {
                 return BibliotekaModel.OznaciIznajmljena(knj.Naziv, knj.Autor);
@@ -114,6 +118,7 @@ namespace Gbook.Model
                   BibliotekaModel.ObrisiKarticu(k.Korisnik.Info.Ime,k.Korisnik.Info.Prezime);
               }
             */
+
             public void ObrisiKarticu(ClanModel clan)
             {
                 BibliotekaModel.ObrisiKarticu(clan.Info.Ime, clan.Info.Prezime);

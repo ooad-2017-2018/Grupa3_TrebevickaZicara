@@ -64,7 +64,13 @@
 
                 </Grid>
             </PivotItem>
+            
+            <Pivot.RightHeader>
+                <CommandBar Background="Transparent">
 
+                    <AppBarButton x:Name="Odjava" Icon="Back" Label="Odjava"  Click="Odjava_Click"/>
+                </CommandBar>
+            </Pivot.RightHeader>
 
         </Pivot>
     </Grid>
