@@ -10,13 +10,13 @@
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid Margin="50 ,200,100,100"
-          Background="LightBlue"
+          Background="White"
           HorizontalAlignment="Left"
           VerticalAlignment="Center"
               Width="300">
 
             <StackPanel x:Name="LoginPanel">
-                <Grid Background="LightBlue"
+                <Grid Background="White"
                       RequestedTheme="Light" BorderBrush="#FFD62222" Margin="88,0,-88,0">
                     
                     <TextBlock HorizontalAlignment="Left"
