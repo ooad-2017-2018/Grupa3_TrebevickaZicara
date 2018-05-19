@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+ using Windows.UI.Xaml.Media.Imaging;
+
 namespace Gbook.Model
 {
         class OsobaINFOModel
@@ -17,14 +19,15 @@ namespace Gbook.Model
             private string adresa;
             private long brojTel;
             private string email;
-        private string sifra;
+            private string sifra;
+           private BitmapImage slika;
 
 
             public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifraa)
             {
                 this.Ime = ime;
                 this.Prezime = prezime;
-                this.jmbg = jmbg;
+                this.Jmbg = jmbg;
                 this.DatumRodjenja = datumRodjenja;
                 this.grad = grad;
                 this.adresa = adresa;
@@ -81,6 +84,8 @@ namespace Gbook.Model
             }
 
         public string Sifra { get => sifra; set => sifra = value; }
+        public BitmapImage Slika { get => slika; set => slika = value; }
+        public long Jmbg { get => jmbg; set => jmbg = value; }
 
 
         /* public class OsobaINFOModel

@@ -17,7 +17,7 @@
                         </Grid>
                     </DataTemplate>
                 </Pivot.TitleTemplate>
-                <PivotItem Header="DodajZaposlenika" Margin="0">
+                <PivotItem Header="Dodaj zaposlenika" Margin="0">
 
                     <!--Form Example-->
                     <Grid Background="White">
@@ -44,19 +44,19 @@
                                 <TextBox x:Name="Email" Header= "Email" Margin="0,50,0,0" MaxLength="220" Width="200" HorizontalAlignment="Left" InputScope="Text"/>
                                 <TextBox x:Name="Grad" Header= "Grad" Margin="0,110,0,0" MaxLength="220" Width="200" HorizontalAlignment="Left" InputScope="Text"/>
 
-                                <RadioButton x:Name="bibliotekar" Content="Bibliotekar" Margin="220, 50">
+                                <RadioButton x:Name="rb_bibliotekar" Content="Bibliotekar" Margin="220, 50">
 
                                 </RadioButton>
-                                <RadioButton x:Name="admin" Content="Admin" Margin="220, 80" >
+                                <RadioButton x:Name="rb_admin" Content="Admin" Margin="220, 80" >
 
                                 </RadioButton>
-                                <RadioButton x:Name="portir" Content="Portir" Margin="220, 110" >
+                                <RadioButton x:Name="rb_portir" Content="Portir" Margin="220, 110" >
 
                                 </RadioButton>
                                 <DatePicker x:Name="DatumRodjenja" Header="Datum rođenja" HorizontalAlignment="Left" Width="172" Margin="0,170,0,0"></DatePicker>
                                 <DatePicker x:Name="DatumZaposlenja" Header="Datum zaposlenja" HorizontalAlignment="Left" Width="200" Margin="0,230,0,0"></DatePicker>
                                 <Button Name="Dodaj" Content="Dodaj" Margin="10,300"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38" Click="Dodaj_Click"></Button>
-                                <Button  Name="Ponisti" RelativePanel.RightOf="Dodaj"  Content="Ponisti" Margin="60, 300" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
+                                <Button  Name="Ponisti" RelativePanel.RightOf="Dodaj"  Content="Ponisti" Margin="60, 300" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38" Click="Ponisti_Click"></Button>
 
                             </RelativePanel>
                             </StackPanel>
@@ -71,21 +71,23 @@
                     </Grid>
                 </PivotItem>
 
-                <PivotItem Header="ObrisiZaposlenika" Margin="0">
+                <PivotItem Header="Obriši zaposlenika" Margin="0">
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel x:Name="ObrisiZaposlenika"  Margin="20,5,0,0" BorderThickness="1" BorderBrush="Black">
                                 <TextBox x:Name="ImeObrisanog" Header= "Ime" Margin="0,5,0,0" MaxLength="320" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
                                 <TextBox x:Name="PrezimeObrisanog" Header="Prezime" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
-                                <RelativePanel>
-                                    <Button Name="ObrisiButton"  Content="Obrisi" Width="100" Margin="120,10,10,10" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
-                                    <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
+                            <TextBox x:Name="JMBGObrisanog" Header="JMBG" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
+
+                            <RelativePanel>
+                                    <Button Name="ObrisiButton"  Content="Obrisi" Width="100" Margin="120,10,10,10" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40" Click="ObrisiButton_Click"></Button>
+                                    <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40" Click="PonistiObrisanoButton_Click"></Button>
                                 </RelativePanel>
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
                 </PivotItem>
-
+<!--
                 <PivotItem Header="Iskaznica">
                     <Grid Background="White">
                         <RelativePanel>
@@ -95,21 +97,23 @@
                             </StackPanel>
 
                             <StackPanel RelativePanel.RightOf="IskaznicaLice" Margin="20,20,0,0" BorderThickness="2" BorderBrush="Gray">
-                                <Image Source="..\image\img.png" Width="150" Height="109" />
+                                <Image x:Name="slikaIskaznica" Source="..\image\img.png" Width="150" Height="109" />
                                 <TextBlock HorizontalAlignment="Center">gBook</TextBlock>
                             </StackPanel>
 
                             <StackPanel RelativePanel.Below="IskaznicaLice">
                                 <RelativePanel>
-                                    <Button Name="iskaznicaDodaj"  Content="Dodaj" Width="100" Margin="350,10,10,10" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
-                                    <Button Name="iskaznicaPonisti"  Content="Ponisti" RelativePanel.RightOf="iskaznicaDodaj" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
-                                </RelativePanel>
+                                    <Button Name="iskaznicaDodaj"  Content="Dodaj" Width="100" Margin="50,50,10,10" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40" Click="iskaznicaDodaj_Click"></Button>
+                                    <Button Name="iskaznicaPonisti"  Content="Ponisti" RelativePanel.RightOf="iskaznicaDodaj" Width="100" Margin="30,50,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
+                                <Button Name="ucitajSliku"  Content="Učitaj sliku" RelativePanel.RightOf="iskaznicaDodaj" Width="100" Margin="310,20,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40" Click="ucitajSliku_Click"></Button>
+
+                            </RelativePanel>
                             </StackPanel>
                         </RelativePanel>
                     </Grid>
                 </PivotItem>
-
-                <PivotItem Header="Izvjestaji">
+-->
+                <PivotItem Header="Izvještaji">
                     <Grid Background="White">
                         <RelativePanel>
                             <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30">

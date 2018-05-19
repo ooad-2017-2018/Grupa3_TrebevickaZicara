@@ -16,6 +16,7 @@ namespace Gbook.Model
             private static List<KarticaModel> kartice = new List<KarticaModel>();
             private static List<KnjigaModel> knjige = new List<KnjigaModel>();
             private static List<CitaonaModel> citaone = new List<CitaonaModel>();
+        private static List<IskaznicaModel> iskaznice = new List<IskaznicaModel>();
 
         
         internal static List<ClanModel> Clanovi { get => clanovi; set => clanovi = value; }
@@ -23,8 +24,7 @@ namespace Gbook.Model
         internal static List<KnjigaModel> Knjige { get => knjige; set => knjige = value; }
         internal static List<CitaonaModel> Citaone { get => citaone; set => citaone = value; }
         internal static List<ZaposlenikModel> Zaposlenici { get => zaposlenici; set => zaposlenici = value; }
-
-
+        internal static List<IskaznicaModel> Iskaznice { get => iskaznice; set => iskaznice = value; }
 
         public static void NapuniInfo()
         {

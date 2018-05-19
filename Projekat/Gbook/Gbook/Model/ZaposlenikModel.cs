@@ -24,7 +24,7 @@ namespace Gbook.Model
                 info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra);
                 DatumZaposlenja = datumZaposlenja;
                 Plata = plata;
-            Tip_radnika = tip;
+                Tip_radnika = tip;
 
             }
 
@@ -37,6 +37,7 @@ namespace Gbook.Model
             public string DajPrezimeZap() { return info.Prezime; }
 
         */
+
         public Tuple<string, string> DajZaposlenika()
             {
                 return new Tuple<string, string>(info.Ime, info.Prezime);

@@ -103,6 +103,7 @@
     <Compile Include="Model\BibliotekarModel.cs" />
     <Compile Include="Model\CitaonaModel.cs" />
     <Compile Include="Model\ClanModel.cs" />
+    <Compile Include="Model\IskaznicaModel.cs" />
     <Compile Include="Model\KarticaModel.cs" />
     <Compile Include="Model\KnjigaModel.cs" />
     <Compile Include="Model\OsobaINFOModel.cs" />

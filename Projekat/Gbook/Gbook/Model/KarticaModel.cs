@@ -9,10 +9,12 @@ namespace Gbook.Model
 {
         class KarticaModel
         {
+        static int id = 1;
             private DateTime vaziDo;
             private long idKartice;
             private ClanModel korisnik;
-            private BibliotekarModel bibliotekar;
+           // private BibliotekarModel bibliotekar; o
+           //ovo nam ne treba
 
 
 
@@ -20,12 +22,13 @@ namespace Gbook.Model
             public long IdKartice { get => idKartice; set => idKartice = value; }
             internal ClanModel Korisnik { get => korisnik; set => korisnik = value; }
 
-            public KarticaModel(DateTime vaziDo, long idKartice, ClanModel clan, BibliotekarModel bibliotekar)
+            public KarticaModel(DateTime vaziDo,  ClanModel clan)
             {
                 this.VaziDo = vaziDo;
-                this.IdKartice = idKartice;
+                this.IdKartice = id;
+                     id++;
                 this.Korisnik = clan;
-                this.bibliotekar = bibliotekar;
+                
             }
             public DateTime DatumVazenjaKartice()
             {
@@ -37,11 +40,12 @@ namespace Gbook.Model
                 return Korisnik;
             }
 
-            public BibliotekarModel DajBibliotekaraKojiJeIzdaoKarticu()
+        /*
+        public BibliotekarModel DajBibliotekaraKojiJeIzdaoKarticu()
             {
                 return bibliotekar;
             }
-        
+        */
     
     }
 
