@@ -9,6 +9,41 @@
 
 
     <Grid >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStateTelefon">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="300"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SPIzvjestaj.Orientation" Value="Vertical"/>
+                        <Setter Target="buttonNajcitanijeKnj.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="buttonNajcitAut.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="buttonPopAut.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="SPLBIzvjestaj.Width" Value="300"/>
+                        <Setter Target="SPLBIzvjestaj.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="SPPretrage.Orientation" Value="Vertical"/>
+                        <Setter Target="SPLBPretrage.Width" Value="300"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateTablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1100"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SPIzvjestaj.Orientation" Value="Horizontal"/>
+                        <Setter Target="buttonNajcitanijeKnj.HorizontalAlignment" Value="Stretch"/>
+                        <Setter Target="buttonNajcitAut.HorizontalAlignment" Value="Stretch"/>
+                        <Setter Target="buttonPopAut.HorizontalAlignment" Value="stretch"/>
+                        <Setter Target="SPLBIzvjestaj.Width" Value="600"/>
+                        <Setter Target="SPLBIzvjestaj.HorizontalAlignment" Value="Left"/>
+                        <Setter Target="SPPretrage.Orientation" Value="Horizontal"/>
+                        <Setter Target="SPLBPretrage.Width" Value="600"/>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <Pivot Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" >
             <Pivot.TitleTemplate>
@@ -30,15 +65,17 @@
 
             <PivotItem Header="Izvjestaji">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <StackPanel Orientation="Horizontal" Background="White">
+                  
+                    <StackPanel x:Name="SPIzvjestaj" Orientation="Horizontal" Background="White">
+                        
                         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="300" Width="500" Margin="100">
                             <Button x:Name="buttonNajcitanijeKnj" Content="Najčitanije knjige" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,30"/>
                             <Button x:Name="buttonNajcitAut" Content="Najčitaniji autori" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,30"/>
                             <Button x:Name="buttonPopAut" Content="Popularni autori" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,30"/>
                         </StackPanel>
-                        <StackPanel Orientation="Vertical" Width="600" Height="500" VerticalAlignment="Top" Margin="100">
+                        <StackPanel x:Name="SPLBIzvjestaj" Orientation="Vertical" Width="600" Height="500" VerticalAlignment="Top"  Margin="40,0,0,0">
                             <TextBlock Text="Izvjestaj" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-                            <ListBox x:Name="listIzvjestaja" Height="400"/>
+                            <ListBox x:Name="listIzvjestaja" Height="400" />
                         </StackPanel>
 
                     </StackPanel>
@@ -47,12 +84,15 @@
 
             <PivotItem Header="Pretrage">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <StackPanel Orientation="Horizontal" Background="White">
-                        <StackPanel Orientation="Vertical" Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">
-                            <TextBlock Text="Unesite naziv knjige ili autora:" TextWrapping="Wrap" Margin="0,30" FontSize="18" FontWeight="Bold"/>
-                            <TextBox Text="" Width="500" Margin="0,0,0,20"/>
+                    <StackPanel x:Name="SPPretrage" Orientation="Horizontal" Background="White">
+                        <StackPanel Orientation="Vertical" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">
+                            
+                            <TextBox Header="Unesite naziv knjige ili autora:" Text="" HorizontalAlignment="Left" Width="300" Margin="0,0,0,20"/>
                         </StackPanel>
-                        <ListBox HorizontalAlignment="Left" Width="600" VerticalAlignment="Top" Height="450" Margin="0,100,0,0"/>
+                        <StackPanel >
+                            <ListBox x:Name="SPLBPretrage" HorizontalAlignment="Left" Width="600" VerticalAlignment="Top" Height="350" Margin="50,100,0,0"/>
+                        </StackPanel>
+                        
 
                     </StackPanel>
                 </ScrollViewer>
