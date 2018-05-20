@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Microsoft.WindowsAzure.MobileServices;
 using Windows.UI.Popups;
 using Gbook.View;
+using Gbook.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -36,15 +37,31 @@ namespace Gbook
            
               
         }
-        IMobileServiceTable<tabela> userTableObj = App.MobileService.GetTable<tabela>();
+
+
+        /* 
+         * za rad sa bazom, 
+         *1. napraviti klasu istoimena tabeli na bazi
+         *2. u klasu ubaciti getere i setere (mora id, jer se ne moze obrisati iz baze id kolona)
+         * 3. u MAINPAGE moraaa biti ovo deklarisano ispod inaaačeee ne radiiiiii
+          
+          
+         */
+        IMobileServiceTable<GbookAdmin> userTableObj1 = App.MobileService.GetTable<GbookAdmin>();
+
+
+        
+       // IMobileServiceTable<tabela> userTableObj = App.MobileService.GetTable<tabela>();
         private void btnSpasi_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            /*
             try
 
             {
 
-                tabela obj = new tabela(); obj.ime = txtIme.Text; obj.prezime = txtPrezime.Text; obj.indeks = txtIndeks.Text; userTableObj.InsertAsync(obj);
+                tabela obj = new tabela();
+                obj.ime = txtIme.Text; obj.prezime = txtPrezime.Text; obj.indeks = txtIndeks.Text;
+                userTableObj.InsertAsync(obj);
 
                 MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog studenta.");
                 msgDialog.ShowAsync();
@@ -58,6 +75,13 @@ namespace Gbook
 
                 msgDialogError.ShowAsync();
             }
+            */
+        }
+
+
+    
+        private void btnSpasi_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

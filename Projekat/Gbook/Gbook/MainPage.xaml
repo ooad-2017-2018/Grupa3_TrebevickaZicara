@@ -14,7 +14,7 @@
             <TextBox x:Name="txtIme" PlaceholderText="Ime"/>
             <TextBox x:Name="txtPrezime" PlaceholderText="Prezime" Margin="0,20, 0, 0"/>
             <TextBox x:Name="txtIndeks" PlaceholderText="Indeks" Margin="0,20, 0, 0" />
-            <Button x:Name ="btnSpasi" Content="Spasi" Tapped="btnSpasi_Tapped" Margin="0,20,0,0" HorizontalAlignment="Stretch"/>
+            <Button x:Name ="btnSpasi" Content="Spasi" Tapped="btnSpasi_Tapped" Margin="0,20,0,0" HorizontalAlignment="Stretch" Click="btnSpasi_Click"/>
 
 
         </StackPanel>

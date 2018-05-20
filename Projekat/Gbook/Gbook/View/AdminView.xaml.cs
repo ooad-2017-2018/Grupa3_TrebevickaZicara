@@ -19,6 +19,10 @@ using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
 
+using Microsoft.WindowsAzure.MobileServices;
+
+using Gbook.View;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Gbook.View
@@ -28,14 +32,49 @@ namespace Gbook.View
     /// </summary>
     public sealed partial class AdminView : Page
     {
+        static int id_brojac = 1;
+
         public AdminView()
         {
             this.InitializeComponent();
          
         }
 
+        public void fja_za_bazu(string tip) {
+            IMobileServiceTable<GbookAdmin> userTableObj = App.MobileService.GetTable<GbookAdmin>();
+           
+          
+                try
 
-        
+                {
+
+                GbookAdmin obj = new GbookAdmin();
+                obj.id = Convert.ToString(id_brojac);
+                obj.ime = Ime.Text;
+                obj.prezime = Prezime.Text;
+                obj.jmbg = jmbgZaposlenika.Text;
+                obj.adresa = Adresa.Text;
+                obj.email=Email.Text;
+
+
+                  userTableObj.InsertAsync(obj);
+                id_brojac++;
+                  //  MessageDialog msgDialog = new MessageDialog("Uspješno ste unijeli novog studenta.");
+                    //msgDialog.ShowAsync();
+
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageDialog msgDialogError = new MessageDialog("Error sa bazom : " + ex.ToString());
+
+                    msgDialogError.ShowAsync();
+                }
+
+            
+
+        }
 
         private void Odjava_Click(object sender, RoutedEventArgs e)
         {
@@ -119,6 +158,7 @@ namespace Gbook.View
                     ZaposlenikModel z;
                     BibliotekaModel.Zaposlenici.Add(z=new ZaposlenikModel(Ime.Text, Prezime.Text, Convert.ToInt64(jmbgZaposlenika.Text), new DateTime(DatumRodjenja.Date.Year, DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Grad.Text, Adresa.Text, Convert.ToInt64(BrojTelefona.Text), Email.Text, "sifra", new DateTime(DatumZaposlenja.Date.Year, DatumZaposlenja.Date.Month, DatumZaposlenja.Date.Day, 11,11,11), 1000, tip));
                     BibliotekaModel.Iskaznice.Add(new IskaznicaModel(z));
+                    fja_za_bazu(tip);
                     var messageDialog = new MessageDialog("Uspješno unesen zaposlenik!");
                     await messageDialog.ShowAsync();
 

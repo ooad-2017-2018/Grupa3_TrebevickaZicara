@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Input;
+
 
 namespace Gbook.Model
 {
@@ -21,7 +23,14 @@ namespace Gbook.Model
             {
                 BibliotekaModel.DodajZaposlenika(new ZaposlenikModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra, datumZaposlenja, plata, tip));
             }
-            public ZaposlenikModel DajZaposlenika(string ime, string prezime)
+
+
+        
+
+
+
+
+        public ZaposlenikModel DajZaposlenika(string ime, string prezime)
             {
                 return BibliotekaModel.DajZaposlenika(ime, prezime);
             }

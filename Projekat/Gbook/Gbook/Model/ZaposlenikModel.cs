@@ -8,6 +8,7 @@ namespace Gbook.Model
 {
         class ZaposlenikModel
         {
+         private int id;
             public OsobaINFOModel info;
             private DateTime datumZaposlenja;
             private double plata;
@@ -28,9 +29,20 @@ namespace Gbook.Model
 
             }
 
-            public DateTime DatumZaposlenja { get => datumZaposlenja; set => datumZaposlenja = value; }
+
+        public ZaposlenikModel(int i, string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email, string sifra, DateTime datumZaposlenja, double plata, string tip)
+        {
+            Id = i;
+            info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra);
+            DatumZaposlenja = datumZaposlenja;
+            Plata = plata;
+            Tip_radnika = tip;
+
+        }
+        public DateTime DatumZaposlenja { get => datumZaposlenja; set => datumZaposlenja = value; }
             public double Plata { get => plata; set => plata = value; }
         public string Tip_radnika { get => tip_radnika; set => tip_radnika = value; }
+        public int Id { get => id; set => id = value; }
 
         /*
         public string DajImeZap() { return info.Ime; }
