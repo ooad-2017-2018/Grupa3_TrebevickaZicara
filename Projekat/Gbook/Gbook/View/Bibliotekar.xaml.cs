@@ -17,6 +17,7 @@ using Windows.Storage.Pickers;
 using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.Storage.Streams;
+using Gbook.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -67,6 +68,111 @@ namespace Gbook.View
 
 
             
+        }
+
+        private async void Dodaj_Click(object sender, RoutedEventArgs e)
+        {
+            if (Ime.Text == "" || Prezime.Text == "" || BrojTelefona.Text == "" || jmbgClana.Text == "")
+            {
+                var messageDialog = new MessageDialog("Neispravni podaci!");
+                await messageDialog.ShowAsync();
+            }
+            
+            else
+            {
+               
+                try
+                {
+
+                    ClanModel z;
+                    BibliotekaModel.Clanovi.Add(z=new ClanModel(new OsobaINFOModel(Ime.Text, Prezime.Text, Convert.ToInt64(jmbgClana.Text), new DateTime(DatumRodjenja.Date.Year, DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Adresa.Text, Convert.ToInt64(BrojTelefona.Text), "sifra"), DateTime.Now));
+                    BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now, z));
+                  
+                    var messageDialog = new MessageDialog("Uspješno unesen član!");
+                    await messageDialog.ShowAsync();
+
+                    AnulirajStanje();
+                }
+                catch (Exception ex)
+                {
+                    var messageDialog1 = new MessageDialog(ex.Message);
+                    await messageDialog1.ShowAsync();
+
+                }
+
+
+
+            }
+        }
+
+
+        public void AnulirajStanje()
+        {
+            Ime.Text = "";
+            Prezime.Text = Adresa.Text  = BrojTelefona.Text = jmbgClana.Text = "";
+            DatumRodjenja.Date = DateTime.Now;
+           // polje_za_sliku.Source = null; 
+            polje_za_sliku.Source = new BitmapImage(new Uri(polje_za_sliku.BaseUri, "Assets/StoreLogo.png"));
+
+            //ne radi, ali ni ne baca izuzetak haha
+          
+        }
+
+        public void AnulirajBrisanjeTab()
+        {
+            ImeObrisanog.Text = PrezimeObrisanog.Text = jmbgObrisanog.Text = "";
+        }
+
+        private async void ObrisiButton_Click(object sender, RoutedEventArgs e)
+        {
+            string ime = ImeObrisanog.Text;
+            string prezime = PrezimeObrisanog.Text;
+            string jmbg = jmbgObrisanog.Text;
+
+            bool testna = false;
+
+            foreach (ClanModel i in BibliotekaModel.Clanovi)
+            {
+                if (i.info.Ime == ImeObrisanog.Text && i.info.Prezime == PrezimeObrisanog.Text && i.info.Jmbg == Convert.ToInt64(jmbgObrisanog.Text))
+                {
+                    BibliotekaModel.Clanovi.Remove(i);
+                    var messageDialog1 = new MessageDialog("Uspješno ste obrisali člana!");
+                    await messageDialog1.ShowAsync();
+                    testna = true;
+                    AnulirajBrisanjeTab();
+                    break;
+                }
+
+            }
+            if (testna == false)
+            {
+                var messageDialog1 = new MessageDialog("Unijeli ste neispravne podatke!");
+                await messageDialog1.ShowAsync();
+                AnulirajBrisanjeTab();
+            }
+        }
+
+        private void PonistiObrisanoButton_Click(object sender, RoutedEventArgs e)
+        {
+            AnulirajBrisanjeTab();
+        }
+
+        private void Pretrazi_Click(object sender, RoutedEventArgs e)
+        {
+            if (rb_zaposlenici.IsChecked == true)
+            {
+                tekst.Text = "Zaposlenici sa najvećim platama:\n1. Meho Mehić\n2. Fata Fatić\n3. Habiba Habi";
+            }
+            else if (rb_knjige.IsChecked == true)
+            {
+                tekst.Text = "Najčitanije knjige mjeseca maja:\n1. Tvrđava - Meša Selimović\n2. Ježeva kućica\n3. Čekajući Godoa";
+            }
+            else if (rb_clanovi.IsChecked == true)
+            {
+                tekst.Text = "Najaktivniji članovi:\n1. Damir Damirovic\n2. Selma Selmic\n3. Emir Emirovic";
+            }
+            else tekst.Text = "";
+
         }
     }
 }

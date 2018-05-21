@@ -73,13 +73,14 @@ namespace Gbook.Model
             {
 
             }
-
+        /*
             public void DodajClana(string ime, string prezime, long jmbg, DateTime datumRodjenja, string grad, string adresa, long brojTel, string email,string sifra, string kategorija, DateTime datumUclanjenja)
             {
                 OsobaINFOModel info = new OsobaINFOModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra);
                 BibliotekaModel.DodajClana(new ClanModel(info, kategorija, datumUclanjenja, null, this));
 
             }
+            */
 
             public void DodajKarticu(DateTime vaziDo,  ClanModel clan)
             {

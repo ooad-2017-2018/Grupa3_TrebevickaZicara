@@ -36,7 +36,25 @@ namespace Gbook.Model
             this.sifra = sifraa;
 
             }
-            public OsobaINFOModel(string ime, string prezime, string sifra)
+
+        //konstruktor za člana ne koristi sve info moguće
+        public OsobaINFOModel(string ime, string prezime, long jmbg, DateTime datumRodjenja, string adresa, long brojTel,  string sifraa)
+        {
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.Jmbg = jmbg;
+            this.DatumRodjenja = datumRodjenja;
+            
+            this.adresa = adresa;
+            this.brojTel = brojTel;
+           
+            this.sifra = sifraa;
+
+        }
+
+
+
+        public OsobaINFOModel(string ime, string prezime, string sifra)
             {
                 this.Ime = ime;
                 this.Prezime = prezime;

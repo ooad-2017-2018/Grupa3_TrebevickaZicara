@@ -41,7 +41,7 @@ namespace Gbook.Model
             zaposlenici.Add(new ZaposlenikModel("Admin", "A", 1605996175068, new DateTime(16 / 05 / 1996), "Sarajevo", "Zmaja od Bosne bb", 62123123, "medii_mail.com", "sifra", new DateTime(10 / 10 / 2010), 1500, "admin"));
             zaposlenici.Add(new ZaposlenikModel("Bibliotekar", "B", 1705996175068, new DateTime(16 / 05 / 1994), "Sarajevo", "Kodzina bb", 62123123, "rambo_mail.com", "sifra", new DateTime(10 / 10 / 2015), 1500, "bibliotekar"));
             zaposlenici.Add(new ZaposlenikModel("Portir", "P", 1605996175068, new DateTime(16 / 05 / 1996), "Sarajevo", "Zmaja od Bosne bb", 62123123, "medii_mail.com", "sifra", new DateTime(10 / 10 / 2010), 1500, "portir"));
-            clanovi.Add(new ClanModel(new OsobaINFOModel("Clan", "daci", "sifra"), "student", new DateTime(14 / 02 / 2018), new KarticaModel(new DateTime(),  new ClanModel()), new BibliotekarModel()));
+            clanovi.Add(new ClanModel(new OsobaINFOModel("Clan", "daci", "sifra"), new DateTime(14 / 02 / 2018)));
 
 
         }

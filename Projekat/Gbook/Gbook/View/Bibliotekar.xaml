@@ -52,13 +52,13 @@
                                      HorizontalAlignment="Left" 
                                      InputScope="TelephoneNumber" />
 
-                                <DatePicker x:Name="Datumrodjenja" 
+                                <DatePicker x:Name="DatumRodjenja" 
                                         Header="Datum rođenja" 
                                         HorizontalAlignment="Left"
                                         Margin="0,10,0,0">
                                 </DatePicker>
 
-                                <TextBox x:Name="jmbgZaposlenika" 
+                                <TextBox x:Name="jmbgClana" 
                                      Header="JMBG"  
                                      Margin="0,10,0,0"
                                      MaxLength="50" 
@@ -103,7 +103,7 @@
 
                             <StackPanel  Margin="30,10,30,30"  RelativePanel.RightOf="Dodajclana" RelativePanel.Below="slikaZaposlenika">
                                 <RelativePanel Margin="30,-160,10,10">
-                                    <Button Name="Dodaj" Content="Dodaj člana" Margin="30,10,0,10"  Width="100"  Background="Green" FontSize="11" Height="38"></Button>
+                                    <Button Name="Dodaj" Content="Dodaj člana" Margin="30,10,0,10"  Width="100"  Background="Green" FontSize="11" Height="38" Click="Dodaj_Click"></Button>
                                     <Button  Name="Ponisti" RelativePanel.RightOf="Dodaj"  Content="Ponisti" Margin="10,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
                                 </RelativePanel>
                             </StackPanel>
@@ -131,10 +131,21 @@
                                      MaxLength="320"
                                      Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
                                 <TextBox x:Name="PrezimeObrisanog" Header="Prezime" Margin="0,5,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  InputScope="PersonalFullName" />
+                                <TextBox x:Name="jmbgObrisanog" 
+                                     Header= "JMBG" 
+                                     Margin="0,5,0,0" 
+                                     MaxLength="320"
+                                     Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+
                                 <RelativePanel>
-                                    <Button Name="ObrisiButton"  Content="Obriši" Width="100" Margin="150,10,10,10" Background="Red" Height ="40"></Button>
+                                    <Button Name="ObrisiButton"  Content="Obriši" Width="100" Margin="150,10,10,10" Background="Red" Height ="40" Click="ObrisiButton_Click"></Button>
+                                    
+                                    <!--
                                     <Button Name="Azuriraj"  Content="Ažuriraj" Width="100" Margin="10,10,10,10" Background="Yellow" Height ="40"></Button>
-                                    <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40"></Button>
+                                    
+                                    nisam ovo još
+                                    -->
+                                    <Button Name="PonistiObrisanoButton" Content="Ponisti" RelativePanel.RightOf="ObrisiButton" Width="100" Margin="30,10,5,5" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" Height ="40" Click="PonistiObrisanoButton_Click"></Button>
                                 </RelativePanel>
                             </StackPanel>
                         </RelativePanel>
@@ -144,7 +155,7 @@
 
 
 
-
+<!--
             <PivotItem Header="Iskaznica">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -171,6 +182,8 @@
                 </ScrollViewer>
             </PivotItem>
 
+            -->
+            
             <PivotItem Header="Dodaj knjigu" Margin="0">
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
@@ -301,18 +314,20 @@
 
                     <Grid Background="White">
                         <RelativePanel>
-                            <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30">
-                                <RadioButton Content="Zaposlenici" Tag="Zaposlenici" />
-                                <RadioButton Content="Clanovi" Tag="Clanovi" />
-                                <RadioButton Content="Knjige" Tag="Knjige" />
+                            <StackPanel Name="RadioButtonsi" Orientation="Vertical" BorderThickness="2"  Margin="30, 80">
+                                <RadioButton x:Name="rb_zaposlenici" Content="Zaposlenici" Tag="Zaposlenici" />
+                                <RadioButton x:Name="rb_clanovi" Content="Clanovi" Tag="Clanovi" />
+                                <RadioButton x:Name="rb_knjige" Content="Knjige" Tag="Knjige" />
                             </StackPanel>
 
                             <StackPanel RelativePanel.RightOf="RadioButtonsi" Margin="10" BorderThickness="2" BorderBrush="Black">
-                                <Image Width="300" Height="150" Source="../image/images.png"></Image>
+                                <RichTextBlock x:Name="ispis_izvjestaja" Width="300" Height="300"></RichTextBlock>
+                                <TextBlock x:Name="tekst" Text="" Margin="10, -280"></TextBlock>
                             </StackPanel >
 
                             <StackPanel RelativePanel.Below="RadioButtonsi">
-                                <Button Name="Pretrazi"  Content="Pretrazi" Margin="300,10,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38"></Button>
+                                
+                                <Button Name="Pretrazi"  Content="Pretrazi" Margin="300,100,0,10"  Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Height="38" Click="Pretrazi_Click"></Button>
                             </StackPanel>
                         </RelativePanel>
                     </Grid>

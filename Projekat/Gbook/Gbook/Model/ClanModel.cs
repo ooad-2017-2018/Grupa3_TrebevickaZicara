@@ -10,31 +10,33 @@ namespace Gbook.Model
     class ClanModel
         {
             public OsobaINFOModel info;
-            private string kategorija;
+            //private string kategorija;
             private DateTime datumUclanjenja;
             private KarticaModel kartica;
             private List<KnjigaModel> knjige;
-            private BibliotekarModel mojBibliotekar;
+         //   private BibliotekarModel mojBibliotekar; nebitno je ko ga je dodao
 
         public ClanModel()
         {
 
         }
 
-            public ClanModel(OsobaINFOModel info, string kategorija, DateTime datumUclanjenja, KarticaModel kartica, BibliotekarModel bibliotekar)
+            public ClanModel(OsobaINFOModel info,  DateTime datumUclanjenja)
             {
                 this.Info = info;
-                this.kategorija = kategorija;
+               // this.kategorija = kategorija;
                 this.datumUclanjenja = datumUclanjenja;
-                this.kartica = kartica;
+               // this.Kartica = kartica;
                 knjige = new List<KnjigaModel>();
-                mojBibliotekar = bibliotekar;
+               // mojBibliotekar = bibliotekar;
             }
 
             internal OsobaINFOModel Info { get => info; set => info = value; }
-            public long DajIDKartice()
+        internal KarticaModel Kartica { get => kartica; set => kartica = value; }
+
+        public long DajIDKartice()
             {
-                return kartica.IdKartice;
+                return Kartica.IdKartice;
             }
             public string DajClanIme()
             {
@@ -58,8 +60,8 @@ namespace Gbook.Model
             public void IznajmiKnjiguClan(string naziv, string autor)
             {
                 KnjigaModel knjiga = new KnjigaModel(naziv, autor, this);
-                bool iz = mojBibliotekar.IznajmiKnjigu(knjiga);
-                if (iz) knjige.Add(knjiga);
+                //bool iz = mojBibliotekar.IznajmiKnjigu(knjiga);
+               // if (iz) knjige.Add(knjiga);
             }
 
             /* zaduzeneknjige clana,datum vracanja knjige,datum uzimanja knjige  plati clanarinu*/

@@ -18,8 +18,8 @@ using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
-
 using Microsoft.WindowsAzure.MobileServices;
+
 
 using Gbook.View;
 
@@ -87,34 +87,50 @@ namespace Gbook.View
 
         private async void DodajSlikuButton_Click(object sender, RoutedEventArgs e)
         {
-           
-
-                FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
-            izbornikFajlaSlike.SuggestedStartLocation =
-
-                PickerLocationId.PicturesLibrary;
-            izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
-            izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
-            izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
-            izbornikFajlaSlike.FileTypeFilter.Add(".png");
-
-                StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
-            if (fajlSlike != null)
-
-                {
-
-                    using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
-
-                    {
-
-                    BitmapImage slika = new BitmapImage();
-                    slika.SetSource(tokFajla);
-                    polje_za_sliku.Source = slika;
-
-                    }
-                }
-
             
+
+                 FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
+             izbornikFajlaSlike.SuggestedStartLocation =
+
+                 PickerLocationId.PicturesLibrary;
+             izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
+             izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
+             izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
+             izbornikFajlaSlike.FileTypeFilter.Add(".png");
+
+                 StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
+             if (fajlSlike != null)
+
+                 {
+
+                     using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+
+                     {
+
+                     BitmapImage slika = new BitmapImage();
+                     slika.SetSource(tokFajla);
+                     polje_za_sliku.Source = slika;
+
+                     }
+                 }
+                 
+
+            /*
+             * zaštoooo nećeee image, zašto nmg uključiti System.Drawings
+             * 
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Izaberite sliku";
+                dlg.Filter = "jpg files (*.jpg)|*.jpg";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    polje_za_sliku.Image = new Bitmap(dlg.FileName);
+                }
+            }
+
+
+            */
 
         }
 
@@ -124,8 +140,24 @@ namespace Gbook.View
             Prezime.Text = Adresa.Text =Grad.Text= Email.Text = brojLicneKarte.Text =BrojTelefona.Text=jmbgZaposlenika.Text= "";
             DatumRodjenja.Date = DatumZaposlenja.Date= DateTime.Now;
             rb_admin.IsChecked = rb_bibliotekar.IsChecked = rb_portir.IsChecked = false;
-            //polje_za_sliku.Source =new ImageSource(); 
+           // polje_za_sliku.Source =null;  
+            //ne kontam kako da mu opet stavim kao source onu početnu sliku
+           // polje_za_sliku.Source = "ms-appx:///Assets/Wide310x150Logo.png";
+           // BitmapImage image = new BitmapImage(new Uri("ms-appx:///Assets/Wide310x150Logo.png", UriKind.Relative));
+            //BitmapImage image1 = new BitmapImage(new Uri("ms - appx:///Assets/Wide310x150Logo.png", UriKind.Absolute));
+          //BitmapImage image2 = new BitmapImage(new Uri("ms - appx:/Assets/Wide310x150Logo.png", UriKind.Relative));
+          //  polje_za_sliku.Source = new BitmapImage(new Uri(this.BaseUri, "Assets / Wide310x150Logo.png"));
+            polje_za_sliku.Source = new BitmapImage(new Uri(polje_za_sliku.BaseUri, "Assets/StoreLogo.png"));
+
+            //ne radi, ali ni ne baca izuzetak haha
+            // / MyProject; component / Images / down.png"
+            // polje_za_sliku.Source = image2;
         }
+
+      //  "/Images/800x600/BackgroundTile.bmp"
+       // ms-appx:/Images/800x600/BackgroundTile.bmp
+
+
 
         private async void Dodaj_Click(object sender, RoutedEventArgs e)
         {

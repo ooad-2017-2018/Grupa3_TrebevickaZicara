@@ -40,11 +40,11 @@ namespace Gbook
 
 
         /* 
-         * za rad sa bazom, 
-         *1. napraviti klasu istoimena tabeli na bazi
-         *2. u klasu ubaciti getere i setere (mora id, jer se ne moze obrisati iz baze id kolona)
-         * 3. u MAINPAGE moraaa biti ovo deklarisano ispod inaaačeee ne radiiiiii
-          
+         za rad sa bazom, 
+         1. napraviti klasu istoimena tabeli na bazi
+         2. u klasu ubaciti getere i setere (mora id, jer se ne moze obrisati iz baze id kolona)
+          3. u MAINPAGE moraaa biti ovo deklarisano ispod inaaačeee ne radiiiiii
+          4. u adminview.xaml.cs dodana preostala potrebna implementacija
           
          */
         IMobileServiceTable<GbookAdmin> userTableObj1 = App.MobileService.GetTable<GbookAdmin>();

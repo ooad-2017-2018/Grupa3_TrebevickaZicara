@@ -20,7 +20,7 @@
                 <PivotItem Header="Dodaj zaposlenika" Margin="0" >
 
                     <!--Form Example-->
-                    <Grid Background="White">
+                   <Grid Background="White"> 
                         <RelativePanel >
                             <StackPanel  x:Name="DodajZaposlenika" Margin="20"  >
                                 <TextBox x:Name="Ime" Header= "Ime" Margin="0,10,0,0" MaxLength="320" Width="200" HorizontalAlignment="Left" InputScope="PersonalFullName"/>

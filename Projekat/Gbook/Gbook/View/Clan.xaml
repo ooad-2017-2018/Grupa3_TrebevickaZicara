@@ -57,7 +57,10 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <StackPanel Background="White">
                         <TextBlock  Text="Iznajmljene knjige" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                        <!--
                         <ListBox x:Name="listaIznajmljenihKnjiga" Height="600"/>
+                        -->
+                        <TextBlock x:Name="lista" Text="" Width="700" Height="700" Margin="0, 20"></TextBlock>
 
                     </StackPanel>
                 </ScrollViewer>
@@ -84,11 +87,16 @@
 
             <PivotItem Header="Pretrage">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                    <StackPanel x:Name="SPPretrage" Orientation="Horizontal" Background="White">
-                        <StackPanel Orientation="Vertical" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150,0,0">
+                    <StackPanel x:Name="SPPretrage"  Background="White">
+                        <TextBox x:Name ="pretraga_txtbox" Header="Unesite naziv knjige ili autora:"  Width="200" Text="" />
+                        <Button x:Name="pretraga_za_clana"   Content="Pretrazi" Width="100" Height="30" Background="Green" Click="pretraga_za_clana_Click"></Button>
+
+                        <StackPanel   >
                             
-                            <TextBox Header="Unesite naziv knjige ili autora:" Text="" HorizontalAlignment="Left" Width="300" Margin="0,0,0,20"/>
+                           
+                             <TextBlock x:Name="ispis_pretrage" Text="" Width ="500" Margin="50, 50" ></TextBlock>
                         </StackPanel>
+                       
                         <StackPanel >
                             <ListBox x:Name="SPLBPretrage" HorizontalAlignment="Left" Width="600" VerticalAlignment="Top" Height="350" Margin="50,100,0,0"/>
                         </StackPanel>
