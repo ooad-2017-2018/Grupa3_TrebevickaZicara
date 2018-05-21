@@ -29,7 +29,20 @@ namespace Gbook.Model
                 this.Zaduzena = zaduzena;
 
             }
-            public KnjigaModel(string naziv, string autor, ClanModel clan)
+
+        public KnjigaModel(string naziv, string autor, long isbn, DateTime godinaIzdanja, int naStanju)
+        {
+            this.Naziv = naziv;
+            this.Autor = autor;
+        
+            this.ISBN = isbn;
+            this.GodinaIzdanja = godinaIzdanja;
+            this.NaStanju = naStanju;
+           
+
+        }
+
+        public KnjigaModel(string naziv, string autor, ClanModel clan)
             {
                 this.Naziv = naziv;
                 this.Autor = autor;

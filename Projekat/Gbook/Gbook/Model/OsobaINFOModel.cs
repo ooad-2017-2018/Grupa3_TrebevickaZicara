@@ -78,7 +78,7 @@ namespace Gbook.Model
             {
                 get
                 {
-                    return ime;
+                    return prezime;
                 }
                 set
                 {
@@ -108,7 +108,7 @@ namespace Gbook.Model
 
         public string to_String()
         {
-            return "Ime: " + ime + "\nPrezime: " + Prezime + "\nJMBG: " + Jmbg + "\nGrad: " + grad + "\nBroj telefona: " + brojTel + "\n";
+            return "Ime: " + Ime + "\nPrezime: " + Prezime + "\nJMBG: " + Jmbg + "\nGrad: " + grad + "\nBroj telefona: " + brojTel + "\n";
         }
         /* public class OsobaINFOModel
          {

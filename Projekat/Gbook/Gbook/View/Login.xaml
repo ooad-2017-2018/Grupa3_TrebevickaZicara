@@ -59,14 +59,18 @@
                     
                     
                 </Grid>
+              
 
 
             </StackPanel>
 
         </Grid>
+        
+            
+      
         <Image HorizontalAlignment="Left" Width ="100" Height="100" Margin="250,-250,0,0" 
                Source="ms-appx:///Assets/Capture.PNG"/>
 
-
+      
     </Grid>
 </Page>

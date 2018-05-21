@@ -31,6 +31,9 @@ namespace Gbook.View
         public Bibliotekar()
         {
             this.InitializeComponent();
+           /* dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy";
+            dateTimePicker1.ShowUpDown = true;*/
         }
 
         private void Odjava_Click(object sender, RoutedEventArgs e)
@@ -174,5 +177,59 @@ namespace Gbook.View
             else tekst.Text = "";
 
         }
+
+
+
+        private async void Spasi_knjigu_Click(object sender, RoutedEventArgs e)
+        {
+            //moram vrijeme ovo napraviti normala
+
+            try
+            {
+                BibliotekaModel.Knjige.Add(new KnjigaModel(Naziv.Text, Autor.Text, Convert.ToInt64(isbn.Text), new DateTime(dateTimePicker1.Date.Year), Convert.ToInt32(Broj_kopija.Text)));
+                var messageDialog1 = new MessageDialog("Uspješno ste unijeli knjigu!");
+                await messageDialog1.ShowAsync();
+                Naziv.Text = Autor.Text = isbn.Text = Broj_kopija.Text = "";
+                // dateTimePicker1.Date.Year = DateTime.Now.Year;
+                slika_knjiga.Source = null;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void DodajSlikuk_Click(object sender, RoutedEventArgs e)
+        {
+
+            FileOpenPicker izbornikFajlaSlike = new FileOpenPicker(); izbornikFajlaSlike.SuggestedStartLocation =
+
+                PickerLocationId.PicturesLibrary; izbornikFajlaSlike.FileTypeFilter.Add(".bmp"); izbornikFajlaSlike.FileTypeFilter.Add(".jpeg"); izbornikFajlaSlike.FileTypeFilter.Add(".jpg"); izbornikFajlaSlike.FileTypeFilter.Add(".png");
+
+            StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync(); if (fajlSlike != null)
+
+            {
+
+                using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+
+                {
+
+                    BitmapImage slika = new BitmapImage();
+                    slika.SetSource(tokFajla);
+                    slika_knjiga.Source = slika;
+
+                }
+            }
+
+        }
+
+        private async void Obrisik_Click(object sender, RoutedEventArgs e)
+        {
+            //doraditi ovo fino
+            var messageDialog1 = new MessageDialog("Uspješno ste obrisali knjigu!");
+            await messageDialog1.ShowAsync();
+            Naslov_k.Text = isbn_b.Text = "";
+        
+    }
     }
 }
