@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Gbook.Model;
 using Gbook.ViewModel;
-
+using Microsoft.WindowsAzure.MobileServices;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Gbook.View
@@ -30,6 +30,9 @@ namespace Gbook.View
             BibliotekaModel.NapuniInfo();
             
         }
+
+        
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
