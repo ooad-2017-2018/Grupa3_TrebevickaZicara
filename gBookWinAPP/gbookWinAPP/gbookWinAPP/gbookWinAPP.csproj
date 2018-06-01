@@ -205,6 +205,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BibliotekaModel.cs" />
     <Compile Include="Models\BibliotekarModel.cs" />
+    <Compile Include="Models\CitaonaModel.cs" />
+    <Compile Include="Models\ClanarinaModel.cs" />
     <Compile Include="Models\ClanModel.cs" />
     <Compile Include="Models\gbookbazaContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />

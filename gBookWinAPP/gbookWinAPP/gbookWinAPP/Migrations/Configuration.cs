@@ -5,7 +5,7 @@ namespace gbookWinAPP.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<gbookWinAPP.Models.gbookbazaContext>
+ internal sealed class Configuration : DbMigrationsConfiguration<gbookWinAPP.Models.gbookbazaContext>
     {
         public Configuration()
         {
@@ -19,5 +19,5 @@ namespace gbookWinAPP.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
         }
-    }
+    } 
 }
