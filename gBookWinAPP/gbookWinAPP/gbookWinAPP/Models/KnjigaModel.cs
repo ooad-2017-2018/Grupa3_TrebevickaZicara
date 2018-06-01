@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WinAPP_Gbook.Models
+namespace gbookWinAPP.Models
 {
-    public class ClanModel
+    public class KnjigaModel
     {
-        public string clanID { get; set; }
-
     }
 }
