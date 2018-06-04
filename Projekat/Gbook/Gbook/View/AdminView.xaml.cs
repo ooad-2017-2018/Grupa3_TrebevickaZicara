@@ -19,7 +19,13 @@ using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
 using Microsoft.WindowsAzure.MobileServices;
-
+using Windows.Media.Capture;
+using Windows.Storage;
+using Windows.Media.Capture;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
+using Windows.UI.Xaml.Media.Imaging;
 
 using Gbook.View;
 
@@ -304,50 +310,100 @@ namespace Gbook.View
             AnulirajBrisanjeTab();
             AnulirajStanje();
         }
+
+        private async void PonistiSlikuButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            /*
+            CameraCaptureUI captureUI = new CameraCaptureUI();
+            captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+            captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+
+            StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+
+            if (photo == null)
+            {
+                // User cancelled photo capture
+                return;
+            }
+
+
+            StorageFolder destinationFolder =
+   await ApplicationData.Current.LocalFolder.CreateFolderAsync("ProfilePhotoFolder",
+        CreationCollisionOption.OpenIfExists);
+        
+        
+
+            await photo.CopyAsync(destinationFolder, "ProfilePhoto.jpg", NameCollisionOption.ReplaceExisting);
+            await photo.DeleteAsync();
+
+            //polje_za_sliku.Source =;
+            */
+
+            var UslikajUI = new CameraCaptureUI();
+            UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+            UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+            StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+
+            IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
+            BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+            SoftwareBitmap softwareBitmap = await decoder.GetSoftwareBitmapAsync();
+
+            SoftwareBitmap softwareBitmapBGR8 = SoftwareBitmap.Convert(softwareBitmap,
+            BitmapPixelFormat.Bgra8,
+            BitmapAlphaMode.Premultiplied);
+
+            SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
+            await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
+
+            polje_za_sliku.Source = bitmapSource;
+
+
+        }
         /*
 private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
 {
 
-   FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
-   izbornikFajlaSlike.SuggestedStartLocation =
+FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
+izbornikFajlaSlike.SuggestedStartLocation =
 
-       PickerLocationId.PicturesLibrary;
-   izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
-   izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
-   izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
-   izbornikFajlaSlike.FileTypeFilter.Add(".png");
+PickerLocationId.PicturesLibrary;
+izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
+izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
+izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
+izbornikFajlaSlike.FileTypeFilter.Add(".png");
 
-   StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
-   if (fajlSlike != null)
+StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
+if (fajlSlike != null)
 
-   {
+{
 
-       using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
 
-       {
+{
 
-           BitmapImage slika = new BitmapImage();
-           slika.SetSource(tokFajla);
-           slikaIskaznica.Source = slika;
+  BitmapImage slika = new BitmapImage();
+  slika.SetSource(tokFajla);
+  slikaIskaznica.Source = slika;
 
-       }
-   }
+}
+}
 
 }
 
 
 private void iskaznicaDodaj_Click(object sender, RoutedEventArgs e)
 {
-   try
-   {
-     ///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
+try
+{
+///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
 
 
-   }
-   catch 
-   {
+}
+catch 
+{
 
-   }
+}
 }
 */
     }

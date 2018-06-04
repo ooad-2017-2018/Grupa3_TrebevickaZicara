@@ -40,7 +40,7 @@
                                 <Image x:Name="polje_za_sliku" Margin="-240, 0, 10, 10"  Source ="ms-appx:///Assets/Wide310x150Logo.png" MaxWidth="150" MaxHeight="150" Width="150"/>
                                 <RelativePanel>
                                     <Button  Name="DodajSlikuButton"  Content="Dodaj sliku" Margin="30,10,20,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Click="DodajSlikuButton_Click"></Button>
-                                    <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti sliku" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                    <Button  Name="UslikajButton" RelativePanel.RightOf="DodajSlikuButton" Content="Uslikaj" Margin="30,10,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Click="PonistiSlikuButton_Click"></Button>
                                 <TextBox x:Name="Email" Header= "Email" Margin="0,50,0,0" MaxLength="220" Width="200" HorizontalAlignment="Left" InputScope="Text"/>
                                 <TextBox x:Name="Grad" Header= "Grad" Margin="0,110,0,0" MaxLength="220" Width="200" HorizontalAlignment="Left" InputScope="Text"/>
 
