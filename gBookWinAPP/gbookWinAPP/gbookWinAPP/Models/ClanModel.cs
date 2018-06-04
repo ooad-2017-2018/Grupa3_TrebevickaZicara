@@ -15,16 +15,26 @@ namespace gbookWinAPP.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors ")]
         public ClanModel()
         {
-            knjigeCLID = new HashSet<KnjigaModel>();
+           ClKnjige = new HashSet<KnjigaModel>();
         }
 
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [Key]
-        public int ClanID { get; set; }
+       // [Required]
+       // [Key]
+      //  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CC2227: CollectionPropertyesShouldBeReadOnly")]
-        public virtual ICollection<KnjigaModel> knjigeCLID { get; set; }
+        /*   [Required]
+           [Key]
+           [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+           public int ClanID { get; set; }
+
+           [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CC2227: CollectionPropertyesShouldBeReadOnly")]
+           [ForeignKey("GetCLIDS")]
+           public virtual KnjigaModel GetCLIDS { get; set; }
+           */
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KnjigaModel> ClKnjige{ get; set; }
 
         [Required]
         [StringLength(25)]

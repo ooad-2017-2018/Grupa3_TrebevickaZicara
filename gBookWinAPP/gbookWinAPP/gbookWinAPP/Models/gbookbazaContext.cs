@@ -14,20 +14,20 @@ namespace gbookWinAPP.Models
         public gbookbazaContext() : base("AzureConnection") { }
 
         /*... ovdje mapiramo klase u gbookbazu*/
-        public virtual DbSet<ZaposlenikModel> OOADZaposlenici { get; set; }
+       // public virtual DbSet<ZaposlenikModel> OOADZaposlenici { get; set; }
         public virtual DbSet<ClanModel> OOADClanovi { get; set; }
-        public virtual DbSet<KarticaModel> OOADKartice { get; set; }
+      //  public virtual DbSet<KarticaModel> OOADKartice { get; set; }
         public virtual DbSet<KnjigaModel> OOADKnjige { get; set; }
-        public virtual DbSet<CitaonaModel> OOADCitaone { get; set; }
-        public virtual DbSet<ClanarinaModel> OOADClanarine { get; set; }
+       // public virtual DbSet<CitaonaModel> OOADCitaone { get; set; }
+       // public virtual DbSet<ClanarinaModel> OOADClanarine { get; set; }
         /* funkcija za automatsko ukidanje mnozine u nazive */
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            modelBuilder.Entity<ClanModel>().
+           /* modelBuilder.Entity<ClanModel>().
             Property(e => e.ClanID).IsRequired();
-
+                     */
             modelBuilder.Entity<ClanModel>().
             Property(e => e.UserName).
             IsUnicode(false);
@@ -83,12 +83,17 @@ namespace gbookWinAPP.Models
             modelBuilder.Entity<KnjigaModel>()
                 .Property(t => t.DatumVracanja);
 
-            //.. Veza Clana i Knjige
-            modelBuilder.Entity<ClanModel>().
-            HasMany(t => t.knjigeCLID)
-            .WithRequired(t => t.ClanModel)
-            .HasForeignKey(t => t.KnjigaID);
+            /*.. Veza Clana i Knjige
+            modelBuilder.Entity<KnjigaModel>().
+            HasKey(t => t.ClanID);
+            */
+           
 
+            modelBuilder.Entity<ClanModel>()
+               .HasMany(e => e.ClKnjige)
+               .WithRequired(e => e.OOADClanovi)
+               .HasForeignKey(e => e.KnjigaID)
+               .WillCascadeOnDelete(false);
 
         }
 
