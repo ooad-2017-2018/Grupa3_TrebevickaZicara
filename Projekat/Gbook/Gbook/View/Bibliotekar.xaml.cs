@@ -44,34 +44,41 @@ namespace Gbook.View
            
         }
 
-       
-            private async void DodajSlikuButton_Click(object sender, RoutedEventArgs e)
+        private async void Ucitavanje_slike(object sender, RoutedEventArgs e, Image o)
+        {
+            FileOpenPicker izbornikFajlaSlike = new FileOpenPicker(); izbornikFajlaSlike.SuggestedStartLocation =
+
+               PickerLocationId.PicturesLibrary; izbornikFajlaSlike.FileTypeFilter.Add(".bmp"); izbornikFajlaSlike.FileTypeFilter.Add(".jpeg"); izbornikFajlaSlike.FileTypeFilter.Add(".jpg"); izbornikFajlaSlike.FileTypeFilter.Add(".png");
+
+            StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync(); if (fajlSlike != null)
+
             {
 
-
-                FileOpenPicker izbornikFajlaSlike = new FileOpenPicker(); izbornikFajlaSlike.SuggestedStartLocation =
-
-                PickerLocationId.PicturesLibrary; izbornikFajlaSlike.FileTypeFilter.Add(".bmp"); izbornikFajlaSlike.FileTypeFilter.Add(".jpeg"); izbornikFajlaSlike.FileTypeFilter.Add(".jpg"); izbornikFajlaSlike.FileTypeFilter.Add(".png");
-
-                StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync(); if (fajlSlike != null)
+                using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
 
                 {
 
-                    using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+                    BitmapImage slika = new BitmapImage();
+                    slika.SetSource(tokFajla);
+                    o.Source = slika;
+                   
 
-                    {
+                }
+            }
+        }
 
-                        BitmapImage slika = new BitmapImage();
-                        slika.SetSource(tokFajla);
-                        polje_za_sliku.Source = slika;
+       
+            private void DodajSlikuButton_Click(object sender, RoutedEventArgs e)
+            {
 
-                    }
+                Ucitavanje_slike(sender, e, polje_za_sliku);
+               
                 }
 
 
 
             
-        }
+        
 
         private async void Dodaj_Click(object sender, RoutedEventArgs e)
         {
@@ -183,7 +190,7 @@ namespace Gbook.View
         private async void Spasi_knjigu_Click(object sender, RoutedEventArgs e)
         {
             //moram vrijeme ovo napraviti normala
-
+            
             try
             {
                 BibliotekaModel.Knjige.Add(new KnjigaModel(Naziv.Text, Autor.Text, Convert.ToInt64(isbn.Text), new DateTime(dateTimePicker1.Date.Year), Convert.ToInt32(Broj_kopija.Text)));
@@ -199,27 +206,10 @@ namespace Gbook.View
             }
         }
 
-        private async void DodajSlikuk_Click(object sender, RoutedEventArgs e)
+        private  void DodajSlikuk_Click(object sender, RoutedEventArgs e)
         {
+            Ucitavanje_slike(sender, e, slika_knjiga);
 
-            FileOpenPicker izbornikFajlaSlike = new FileOpenPicker(); izbornikFajlaSlike.SuggestedStartLocation =
-
-                PickerLocationId.PicturesLibrary; izbornikFajlaSlike.FileTypeFilter.Add(".bmp"); izbornikFajlaSlike.FileTypeFilter.Add(".jpeg"); izbornikFajlaSlike.FileTypeFilter.Add(".jpg"); izbornikFajlaSlike.FileTypeFilter.Add(".png");
-
-            StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync(); if (fajlSlike != null)
-
-            {
-
-                using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
-
-                {
-
-                    BitmapImage slika = new BitmapImage();
-                    slika.SetSource(tokFajla);
-                    slika_knjiga.Source = slika;
-
-                }
-            }
 
         }
 

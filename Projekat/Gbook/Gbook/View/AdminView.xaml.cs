@@ -193,8 +193,18 @@ namespace Gbook.View
                 else if (rb_portir.IsChecked==true) tip = "portir";
                 try
                 {
-                    ZaposlenikModel z;
-                    BibliotekaModel.Zaposlenici.Add(z=new ZaposlenikModel(Ime.Text, Prezime.Text, Convert.ToInt64(jmbgZaposlenika.Text), new DateTime(DatumRodjenja.Date.Year, DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Grad.Text, Adresa.Text, Convert.ToInt64(BrojTelefona.Text), Email.Text, "sifra", new DateTime(DatumZaposlenja.Date.Year, DatumZaposlenja.Date.Month, DatumZaposlenja.Date.Day, 11,11,11), 1000, tip));
+                    ZaposlenikModel z= new ZaposlenikModel(Ime.Text, Prezime.Text,
+                        Convert.ToInt64(jmbgZaposlenika.Text), new DateTime(DatumRodjenja.Date.Year,
+                        DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Grad.Text,
+                        Adresa.Text, Convert.ToInt64(BrojTelefona.Text), Email.Text, "sifra",
+                        new DateTime(DatumZaposlenja.Date.Year, DatumZaposlenja.Date.Month,
+                        DatumZaposlenja.Date.Day, 11, 11, 11), 1000, tip);
+
+
+
+                    BibliotekaModel.Zaposlenici.Add(z);
+
+
                     BibliotekaModel.Iskaznice.Add(new IskaznicaModel(z));
                     fja_za_bazu(tip);
                     var messageDialog = new MessageDialog("Uspješno unesen zaposlenik!");
@@ -311,39 +321,14 @@ namespace Gbook.View
             AnulirajStanje();
         }
 
-        private async void PonistiSlikuButton_Click(object sender, RoutedEventArgs e)
+        private async void Uslikaj_kamerom(object sender, RoutedEventArgs e)
         {
-
-            /*
-            CameraCaptureUI captureUI = new CameraCaptureUI();
-            captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
-            captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
-
-            StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
-
-            if (photo == null)
-            {
-                // User cancelled photo capture
-                return;
-            }
-
-
-            StorageFolder destinationFolder =
-   await ApplicationData.Current.LocalFolder.CreateFolderAsync("ProfilePhotoFolder",
-        CreationCollisionOption.OpenIfExists);
-        
-        
-
-            await photo.CopyAsync(destinationFolder, "ProfilePhoto.jpg", NameCollisionOption.ReplaceExisting);
-            await photo.DeleteAsync();
-
-            //polje_za_sliku.Source =;
-            */
-
+            //Damir rjesio problem sa ucitavanjem u Source uvodjenjem bitmapa
             var UslikajUI = new CameraCaptureUI();
             UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
             UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
             StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+
 
             IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
             BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
@@ -358,7 +343,13 @@ namespace Gbook.View
 
             polje_za_sliku.Source = bitmapSource;
 
+            
+        }
 
+        private void PonistiSlikuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Uslikaj_kamerom(sender, e);
+          
         }
         /*
 private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
@@ -406,5 +397,5 @@ catch
 }
 }
 */
+        }
     }
-}
