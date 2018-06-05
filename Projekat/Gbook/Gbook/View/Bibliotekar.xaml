@@ -96,7 +96,7 @@
 
                                 <RelativePanel>
                                     <Button  Name="DodajSlikuButton"  Content="Dodaj sliku" Margin="30,50,20,10" Width="100"  Background="Green" FontSize="11" Click="DodajSlikuButton_Click"></Button>
-                                    <Button  Name="PonistiSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Ponisti" Margin="30,50,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11"></Button>
+                                    <Button  Name="UslikajSlikuButton" RelativePanel.RightOf="DodajSlikuButton" Content="Uslikaj" Margin="30,50,30,10" Width="100"  Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}" FontSize="11" Click="UslikajSlikuButton_Click"></Button>
                                     <Image  x:Name="polje_za_sliku" Source ="ms-appx:///Assets/Square150x150Logo.png" MaxWidth="300" MaxHeight="300"  Margin="90,130" Width="150" Height="150"/>
                                 </RelativePanel>
                             </StackPanel>

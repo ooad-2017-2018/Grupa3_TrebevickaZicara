@@ -345,11 +345,9 @@ namespace Gbook.View
 
             
         }
-
-        private void PonistiSlikuButton_Click(object sender, RoutedEventArgs e)
+        private void UslikajButton_Click(object sender, RoutedEventArgs e)
         {
             Uslikaj_kamerom(sender, e);
-          
         }
         /*
 private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
@@ -373,9 +371,9 @@ using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.R
 
 {
 
-  BitmapImage slika = new BitmapImage();
-  slika.SetSource(tokFajla);
-  slikaIskaznica.Source = slika;
+BitmapImage slika = new BitmapImage();
+slika.SetSource(tokFajla);
+slikaIskaznica.Source = slika;
 
 }
 }
@@ -397,5 +395,5 @@ catch
 }
 }
 */
-        }
+    }
     }

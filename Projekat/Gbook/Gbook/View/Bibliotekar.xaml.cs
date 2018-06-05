@@ -18,6 +18,10 @@ using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
+using Windows.Media.Capture;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -221,5 +225,27 @@ namespace Gbook.View
             Naslov_k.Text = isbn_b.Text = "";
         
     }
+
+        private async void UslikajSlikuButton_Click(object sender, RoutedEventArgs e)
+        {
+            var UslikajUI = new CameraCaptureUI();
+            UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+            UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+            StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+
+            IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
+            BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+            SoftwareBitmap softwareBitmap = await decoder.GetSoftwareBitmapAsync();
+
+            SoftwareBitmap softwareBitmapBGR8 = SoftwareBitmap.Convert(softwareBitmap,
+            BitmapPixelFormat.Bgra8,
+            BitmapAlphaMode.Premultiplied);
+
+            SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
+            await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
+
+            polje_za_sliku.Source = bitmapSource;
+
+        }
     }
 }
