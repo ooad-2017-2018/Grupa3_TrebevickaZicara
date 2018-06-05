@@ -122,12 +122,12 @@ namespace Gbook.Model
                  return zaposlenici.FindAll(delegate (ZaposlenikModel z) { return "PortirModel" == z.GetType().Name; }).ConvertAll(x => (PortirModel)x);
              }
              */
-            public static List<KnjigaModel> DajKnjige()
+            private static List<KnjigaModel> DajKnjige()
             {
                 return Knjige;
             }
 
-            public static List<KarticaModel> DajKartice()
+            private static List<KarticaModel> DajKartice()
             {
                 return Kartice;
             }

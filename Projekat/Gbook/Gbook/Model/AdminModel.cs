@@ -82,11 +82,11 @@ namespace Gbook.Model
 
             public List<KnjigaModel> IzvjestajKnjige()
             {
-                return BibliotekaModel.DajKnjige();
+                return BibliotekaModel.Knjige;
             }
             public List<KarticaModel> IzvjestajKartice()
             {
-                return BibliotekaModel.DajKartice();
+                return BibliotekaModel.Kartice;
             }
 
 

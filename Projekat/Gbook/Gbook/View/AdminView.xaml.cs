@@ -323,26 +323,29 @@ namespace Gbook.View
 
         private async void Uslikaj_kamerom(object sender, RoutedEventArgs e)
         {
-            //Damir rjesio problem sa ucitavanjem u Source uvodjenjem bitmapa
-            var UslikajUI = new CameraCaptureUI();
-            UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
-            UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
-            StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+            try
+            {
+                //Damir rjesio problem sa ucitavanjem u Source uvodjenjem bitmapa
+                var UslikajUI = new CameraCaptureUI();
+                UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+                UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+                StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
 
 
-            IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
-            BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
-            SoftwareBitmap softwareBitmap = await decoder.GetSoftwareBitmapAsync();
+                IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
+                BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+                SoftwareBitmap softwareBitmap = await decoder.GetSoftwareBitmapAsync();
 
-            SoftwareBitmap softwareBitmapBGR8 = SoftwareBitmap.Convert(softwareBitmap,
-            BitmapPixelFormat.Bgra8,
-            BitmapAlphaMode.Premultiplied);
+                SoftwareBitmap softwareBitmapBGR8 = SoftwareBitmap.Convert(softwareBitmap,
+                BitmapPixelFormat.Bgra8,
+                BitmapAlphaMode.Premultiplied);
 
-            SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
-            await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
+                SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
+                await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
 
-            polje_za_sliku.Source = bitmapSource;
-
+                polje_za_sliku.Source = bitmapSource;
+            }
+            catch { }
             
         }
         private void UslikajButton_Click(object sender, RoutedEventArgs e)
