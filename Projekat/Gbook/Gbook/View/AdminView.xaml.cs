@@ -19,6 +19,10 @@ using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
 using Microsoft.WindowsAzure.MobileServices;
+ WebApp
+
+using Gbook.ViewsMVVM;
+=======
 using Windows.Media.Capture;
 using Windows.Storage;
 using Windows.Media.Capture;
@@ -26,6 +30,7 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.Graphics.Imaging;
 using Windows.UI.Xaml.Media.Imaging;
+ master
 
 using Gbook.View;
 

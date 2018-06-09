@@ -24,12 +24,6 @@ namespace Gbook.Model
                 BibliotekaModel.DodajZaposlenika(new ZaposlenikModel(ime, prezime, jmbg, datumRodjenja, grad, adresa, brojTel, email, sifra, datumZaposlenja, plata, tip));
             }
 
-
-        
-
-
-
-
         public ZaposlenikModel DajZaposlenika(string ime, string prezime)
             {
                 return BibliotekaModel.DajZaposlenika(ime, prezime);
