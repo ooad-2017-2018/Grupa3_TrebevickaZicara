@@ -31,6 +31,26 @@ namespace Gbook
             this.InitializeComponent();
 
         }
+        private async void btnlogIn_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            //..validacija za korisnike(clanove) sistema
+            if (Username.Text.Length == 0 || Password.Password.Length == 0)
+            {
+                var dialog = new MessageDialog("Greska: UserName ili Password polje prazno!");
+                await dialog.ShowAsync();
+
+            }
+            else
+            if (Username.Text == "admin" && Password.Password == "admin")
+            {
+                this.Frame.Navigate(typeof(AdminView));
+            }
+            else
+            {
+                var dialog = new MessageDialog("Greska: User nema pristup aplikaciji!");
+                await dialog.ShowAsync();
+            }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -84,6 +104,7 @@ namespace Gbook
         {
 
         }
+
     }
 }
 

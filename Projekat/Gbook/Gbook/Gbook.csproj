@@ -95,7 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Core\ErrorHandeling.cs" />
+    <Compile Include="ViewsMVVM\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\AdminModel.cs" />
@@ -113,11 +114,19 @@
     <Compile Include="Model\ZaposlenikModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tabela.cs" />
+    <Compile Include="ViewModelsMVVM\AdminViewModel.cs" />
+    <Compile Include="ViewModelsMVVM\INavigationService.cs" />
+    <Compile Include="ViewModelsMVVM\MainPageViewModel.cs" />
+    <Compile Include="ViewModelsMVVM\NavigationService.cs" />
+    <Compile Include="ViewModelsMVVM\RelayCommand.cs" />
     <Compile Include="ViewModel\AdminDodajViewModel.cs" />
     <Compile Include="ViewModel\BibliotekarViewModel.cs" />
     <Compile Include="ViewModel\ClanViewModel.cs" />
     <Compile Include="ViewModel\LogInViewModel.cs" />
     <Compile Include="ViewModel\PortirViewModel.cs" />
+    <Compile Include="ViewsMVVM\AdminView.xaml.cs">
+      <DependentUpon>AdminView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
     </Compile>
@@ -173,9 +182,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="ViewsMVVM\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewsMVVM\AdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AdminView.xaml">
       <SubType>Designer</SubType>

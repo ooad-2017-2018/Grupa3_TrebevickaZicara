@@ -20,6 +20,7 @@ using Windows.Storage.Streams;
 using Gbook.Model;
 using Microsoft.WindowsAzure.MobileServices;
 
+using Gbook.ViewsMVVM;
 
 using Gbook.View;
 
