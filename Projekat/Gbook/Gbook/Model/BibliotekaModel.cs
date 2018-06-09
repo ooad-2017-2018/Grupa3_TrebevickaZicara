@@ -68,7 +68,8 @@ namespace Gbook.Model
 
             public static void ObrisiKarticu(string ime, string prezime)
             {
-                KarticaModel kartica = Kartice.Find(delegate (KarticaModel k) { return k.Korisnik.Info.Ime == ime && k.Korisnik.Info.Prezime == prezime; });
+                KarticaModel kartica = Kartice.Find(delegate (KarticaModel k) {
+                    return k.Korisnik.Info.Ime == ime && k.Korisnik.Info.Prezime == prezime; });
                 if (kartica == null)
                 {
                     throw new Exception("Ne postoji clan za brisanje!");
@@ -121,12 +122,12 @@ namespace Gbook.Model
                  return zaposlenici.FindAll(delegate (ZaposlenikModel z) { return "PortirModel" == z.GetType().Name; }).ConvertAll(x => (PortirModel)x);
              }
              */
-            public static List<KnjigaModel> DajKnjige()
+            private static List<KnjigaModel> DajKnjige()
             {
                 return Knjige;
             }
 
-            public static List<KarticaModel> DajKartice()
+            private static List<KarticaModel> DajKartice()
             {
                 return Kartice;
             }

@@ -19,8 +19,18 @@ using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using Gbook.Model;
 using Microsoft.WindowsAzure.MobileServices;
+ WebApp
 
 using Gbook.ViewsMVVM;
+=======
+using Windows.Media.Capture;
+using Windows.Storage;
+using Windows.Media.Capture;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
+using Windows.UI.Xaml.Media.Imaging;
+ master
 
 using Gbook.View;
 
@@ -188,8 +198,18 @@ namespace Gbook.View
                 else if (rb_portir.IsChecked==true) tip = "portir";
                 try
                 {
-                    ZaposlenikModel z;
-                    BibliotekaModel.Zaposlenici.Add(z=new ZaposlenikModel(Ime.Text, Prezime.Text, Convert.ToInt64(jmbgZaposlenika.Text), new DateTime(DatumRodjenja.Date.Year, DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Grad.Text, Adresa.Text, Convert.ToInt64(BrojTelefona.Text), Email.Text, "sifra", new DateTime(DatumZaposlenja.Date.Year, DatumZaposlenja.Date.Month, DatumZaposlenja.Date.Day, 11,11,11), 1000, tip));
+                    ZaposlenikModel z= new ZaposlenikModel(Ime.Text, Prezime.Text,
+                        Convert.ToInt64(jmbgZaposlenika.Text), new DateTime(DatumRodjenja.Date.Year,
+                        DatumRodjenja.Date.Month, DatumRodjenja.Date.Day, 11, 11, 11), Grad.Text,
+                        Adresa.Text, Convert.ToInt64(BrojTelefona.Text), Email.Text, "sifra",
+                        new DateTime(DatumZaposlenja.Date.Year, DatumZaposlenja.Date.Month,
+                        DatumZaposlenja.Date.Day, 11, 11, 11), 1000, tip);
+
+
+
+                    BibliotekaModel.Zaposlenici.Add(z);
+
+
                     BibliotekaModel.Iskaznice.Add(new IskaznicaModel(z));
                     fja_za_bazu(tip);
                     var messageDialog = new MessageDialog("Uspješno unesen zaposlenik!");
@@ -305,51 +325,83 @@ namespace Gbook.View
             AnulirajBrisanjeTab();
             AnulirajStanje();
         }
+
+        private async void Uslikaj_kamerom(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Damir rjesio problem sa ucitavanjem u Source uvodjenjem bitmapa
+                var UslikajUI = new CameraCaptureUI();
+                UslikajUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+                UslikajUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+                StorageFile slika = await UslikajUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+
+
+                IRandomAccessStream stream = await slika.OpenAsync(FileAccessMode.Read);
+                BitmapDecoder decoder = await BitmapDecoder.CreateAsync(stream);
+                SoftwareBitmap softwareBitmap = await decoder.GetSoftwareBitmapAsync();
+
+                SoftwareBitmap softwareBitmapBGR8 = SoftwareBitmap.Convert(softwareBitmap,
+                BitmapPixelFormat.Bgra8,
+                BitmapAlphaMode.Premultiplied);
+
+                SoftwareBitmapSource bitmapSource = new SoftwareBitmapSource();
+                await bitmapSource.SetBitmapAsync(softwareBitmapBGR8);
+
+                polje_za_sliku.Source = bitmapSource;
+            }
+            catch { }
+            
+        }
+        private void UslikajButton_Click(object sender, RoutedEventArgs e)
+        {
+            Uslikaj_kamerom(sender, e);
+        }
         /*
 private async void ucitajSliku_Click(object sender, RoutedEventArgs e)
 {
 
-   FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
-   izbornikFajlaSlike.SuggestedStartLocation =
+FileOpenPicker izbornikFajlaSlike = new FileOpenPicker();
+izbornikFajlaSlike.SuggestedStartLocation =
 
-       PickerLocationId.PicturesLibrary;
-   izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
-   izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
-   izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
-   izbornikFajlaSlike.FileTypeFilter.Add(".png");
+PickerLocationId.PicturesLibrary;
+izbornikFajlaSlike.FileTypeFilter.Add(".bmp");
+izbornikFajlaSlike.FileTypeFilter.Add(".jpeg");
+izbornikFajlaSlike.FileTypeFilter.Add(".jpg");
+izbornikFajlaSlike.FileTypeFilter.Add(".png");
 
-   StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
-   if (fajlSlike != null)
+StorageFile fajlSlike = await izbornikFajlaSlike.PickSingleFileAsync();
+if (fajlSlike != null)
 
-   {
+{
 
-       using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
+using (IRandomAccessStream tokFajla = await fajlSlike.OpenAsync(FileAccessMode.Read))
 
-       {
+{
 
-           BitmapImage slika = new BitmapImage();
-           slika.SetSource(tokFajla);
-           slikaIskaznica.Source = slika;
+BitmapImage slika = new BitmapImage();
+slika.SetSource(tokFajla);
+slikaIskaznica.Source = slika;
 
-       }
-   }
+}
+}
 
 }
 
 
 private void iskaznicaDodaj_Click(object sender, RoutedEventArgs e)
 {
-   try
-   {
-     ///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
+try
+{
+///  BibliotekaModel.Kartice.Add(new KarticaModel(DateTime.Now,1, ))
 
 
-   }
-   catch 
-   {
+}
+catch 
+{
 
-   }
+}
 }
 */
     }
-}
+    }
